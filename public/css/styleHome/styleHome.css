@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ecf0f1;
+}
+
+/* Mobile */
+@media only screen and (max-width: 480px){
+    #container{
+        height: 100vh;
+        width: 100vw;
+        background-color: #353b48;
+    }
+    header{
+        height: 10vh;
+        width: 100vw;
+        padding: 5vw;
+        background-color: #9c88ff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo{
+        font-size: 1.5em;
+        font-family: 'Pattaya', sans-serif;
+    }
+    nav{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #menu_checkbox{
+        width: 3em;
+        height: 3em;
+        position: absolute;
+        opacity: 0;
+    }
+    .menu_bar{
+        height: 5px;
+        width: 40px;
+        background-color: white;
+        border-radius: 5px;
+    }
+    #bar2{
+        margin-top: 7px;
+        margin-bottom: 7px;
+    }
+    #menu_checkbox:checked ~ #bar2{
+        animation: toggle_menu .1s forwards;
+    }
+    @keyframes toggle_menu {
+        100%{
+            transform: translateX(-20px);
+            opacity: 0;
+        }
+    }
+    #menu_checkbox:checked ~ #bar1{
+        animation: deg_bar1_menu .1s .2s forwards;
+        transition: 1s ease-out;
+        
+    }
+    #menu_checkbox:checked ~ #bar3{
+        animation: deg_bar3_menu .1s .2s forwards;
+        transition: 1s ease-out;
+    }
+    @keyframes deg_bar1_menu {
+        100%{
+            transform: rotate(45deg);
+            position: absolute;
+        }
+    }
+    @keyframes deg_bar3_menu {
+        100%{
+            transform: rotate(-45deg);
+            position: absolute;
+        }
+    }
+    .menu{
+        height: 5vh;
+        width: 100vw;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        font-family: 'Roboto', sans-serif;
+        color: #ecf0f1;
+    }
+    .menu_ul{
+        display: flex;
+        background-color: #5f27cd;
+    }
+    .menu_ul li{
+        margin: 1em;
+    }
+    .menu_ul a{
+        text-decoration: none;
+        color: #ecf0f1;
+    }
+    #menu_checkbox:checked ~ .menu{
+        animation: vaikrl 1s forwards;
+        transition: 1s ease-out;
+    }
+    @keyframes vaikrl {
+        50%{
+            transform: translateY(10vh);
+        }
+        100%{
+            transform: translateY(10vh);
+            z-index: 1;
+        }
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 481px) and (max-width: 839px){
+    #container{
+        height: 100vmax;
+        width: 100vmax;
+        background-color: orange;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 840px) and (max-width: 1024px){
+    #container{
+        background-color: violet;
+    }
+}
+
+/* Telas Maiores */
+@media only screen and (min-width: 1025px){
+    #container{
+        background-color: green;
+    }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- css -->
+        <!-- <link rel="stylesheet" href="css/reset.css"> -->
+        <link rel="stylesheet" href="css/styleProdutos/styleProdutos.css">
+</head>
+<body>
+    <h1>Produtos</h1>
+
+    <table border="1px">
+
+        <tr>
+            <th>Id</th>
+            <th>Titulo</th>
+            <th>Review</th>
+            <th>Autor</th>
+            <th>Ação do usuario</th>
+        </tr>
+
+        <% for(let i = 0; i < reviews.length; i++){ %>
+        <tr>
+            <td><%= reviews[i].id %></td>
+            <td><%= reviews[i].titulo_review %></td>
+            <td><%= reviews[i].review %></td>
+            <td><%= reviews[i].autor %></td>
+            <td><a href="review">Visualisar</a></td>
+        </tr> 
+        <% } %>
+    </table>
+    
+    <!-- <td class="testan"><a href="review">Visualisar</a></td> -->
+    <script src="js/scriptProdutos/scriptProdutos.js"></script>
+</body>
+</html>

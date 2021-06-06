@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+
+/* Mobile */
+@media only screen and (max-width: 480px){
+
+}
+
+/* Tablet */
+@media only screen and (min-width: 481px) and (max-width: 839px){
+
+}
+
+/* Desktop */
+@media only screen and (min-width: 840px) and (max-width: 1024px){
+
+}
+
+/* Telas Maiores */
+@media only screen and (min-width: 1025px){
+    
+}
