@@ -38,10 +38,12 @@
         </header>
         <main>
             <% for(let i = 0; i < reviews.length; i++){%>
+            <div class="ooi">
                 <%= reviews[i].id %>
                 <%= reviews[i].titulo_review %>
                 <%= reviews[i].review %>
                 <%= reviews[i].autor%>
+            </div>
                 <br>
             <%  }   %>
             <!-- <button class="teste"> <a href="reviews">Botão teste</a> </button> -->

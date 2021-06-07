@@ -111,6 +111,9 @@ body{
             z-index: 1;
         }
     }
+    .ooi{
+        border: 1px solid black;
+    }
 }
 
 /* Tablet */
