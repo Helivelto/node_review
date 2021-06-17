@@ -14,13 +14,9 @@ module.exports.review = (application, req, res) => {
 
     const connection = application.config.dbConnection;
     const reviewDao = new application.app.models.ReviewsDAO(connection);
+    const id = req.query
 
-    reviewDao.getReviews((error, result) => {
+    reviewDao.getReview(id, (error, result) => {
         res.render("reviews/review", {review: result})
-    })
-        
-    connection.query('select * from noticias where id = 2', function(error, result){
-        res.render('reviews/review', {review: result})
-
-    })    
+    })   
 }
