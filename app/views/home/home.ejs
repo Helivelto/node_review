@@ -38,11 +38,8 @@
         </header>
         <main>
             <% for(let i = 0; i < reviews.length; i++){%>
-            <div class="ooi">
-                <%= reviews[i].id %>
-                <%= reviews[i].titulo_review %>
-                <%= reviews[i].review %>
-                <%= reviews[i].autor%>
+            <div class="box_review">
+                <a href="review?id=<%=reviews[i].id%>"><%= reviews[i].titulo_review %></a> 
             </div>
                 <br>
             <%  }   %>
