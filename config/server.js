@@ -11,6 +11,7 @@ app.set('views', './app/views')
 
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(expressValidator())
+app.use(express.static('./app/public'))
 
 consign()
 .include('app/routes')
@@ -19,8 +20,5 @@ consign()
 .then('app/controllers')
 .into(app)
 
-app.use(express.static('public'))
-app.use('./css', express.static(__dirname + 'public/css'))
-app.use('./js', express.static(__dirname + 'public/js'))
 
 module.exports = app
