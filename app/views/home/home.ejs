@@ -46,10 +46,9 @@
 
                 <% for(let i = 0; i < reviews.length; i++){%>
                 <div class="box_review">
-                    <span><%= reviews[i].autor %></span>
+                    <span id="span_autor"><%= reviews[i].autor %></span>
                     <a href="review?id=<%=reviews[i].id%>"><%= reviews[i].titulo_review %></a> 
-                    <span><%= reviews[i].produto %></span>
-                    <span><%= reviews[i].desc_review %></span>
+                    <span id="span_produto"><%= reviews[i].produto %></span>
                 </div>
                     <br>
                 <%  }   %>

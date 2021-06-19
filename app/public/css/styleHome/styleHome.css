@@ -14,7 +14,7 @@ body{
         width: 100vw;
     }
     header{
-        height: 10vh;
+        height: 13vh;
         width: 100vw;
         padding: 5vw;
         background-color: #9c88ff;
@@ -112,8 +112,8 @@ body{
         }
     }
     .box_review{
-        width: 95vw;
-        height: 8em;
+        width: 90vw;
+        height: 9em;
         margin: auto;
         padding: 1em;
         border-radius: 8px;
@@ -125,15 +125,22 @@ body{
         color: white;
         text-decoration: none;
         font-size: 1.5rem;
+        font-weight: bolder;
+        margin-top: auto;
+        margin-bottom: auto;
+        justify-self: center;
     }
     .box_review span{
-        color: white;
-        font-size: 1rem;
+        color: #F5F6FA;
+        font-size: 1.1rem;
         margin-top: .5em;
-        margin-bottom: .5em;
+        /* margin-bottom: .5em; */
+    }
+    #span_produto{
+        margin: 0px;
     }
     #box_main{
-        margin-top: 6vh;
+        margin-top: 10vh;
     }
 }
 
