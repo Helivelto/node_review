@@ -15,7 +15,7 @@ ReviewsDAO.prototype.salvarReview = function (review, callback){
 }
 
 ReviewsDAO.prototype.getUltimas = function(review, callback){
-    this._connection.query('select * from reviews order by id desc', review, callback)
+    this._connection.query('select * from reviews order by id desc limit 3', review, callback)
 }
 
 module.exports = () => {
