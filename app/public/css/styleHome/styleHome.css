@@ -78,17 +78,23 @@ body{
         }
     }
     .menu{
-        height: 5vh;
+        display: none;
         width: 100vw;
         position: absolute;
-        left: 0;
-        top: 0;
+        right: 0;
+        top: 13vh;
         z-index: -1;
         font-family: 'Roboto', sans-serif;
         color: #ecf0f1;
+        transform: translateX(0vw);
     }
     .menu_ul{
+        height: 50vh;
+        width: 60vw;
+        position: absolute;
+        right: 0;
         display: flex;
+        flex-direction: column;
         background-color: #5f27cd;
     }
     .menu_ul li{
@@ -99,15 +105,19 @@ body{
         color: #ecf0f1;
     }
     #menu_checkbox:checked ~ .menu{
+        display: block;
         animation: ani_menu 1s forwards;
         transition: 1s ease-out;
     }
     @keyframes ani_menu {
-        50%{
-            transform: translateY(10vh);
+        70%{
+            display: block;
+            transform: translateX(0vw);
+            z-index: 1;
         }
         100%{
-            transform: translateY(10vh);
+            display: block;
+            transform: translateX(0vw);
             z-index: 1;
         }
     }
