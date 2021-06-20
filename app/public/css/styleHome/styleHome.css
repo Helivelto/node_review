@@ -157,7 +157,8 @@ body{
         font-family: 'Roboto', sans-serif;
         color: #fff;
         display: flex;
-        margin-top: 5vh;
+        margin-top: 3vh;
+        margin-bottom: 4vh;
     }
     .rodape{
         display: flex;
@@ -203,9 +204,9 @@ body{
         position: absolute;
         text-align: left;
         font-family: 'Roboto', sans-serif;
-        font-size: 1.7rem;
+        font-size: 1.6rem;
         width: 40vw;
-        top: 4em;
+        top: 3em;
         left: 5vw;
         font-weight: 600;
     }
