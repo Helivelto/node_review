@@ -23,7 +23,7 @@ body{
         justify-content: space-between;
     }
     .logo{
-        font-size: 1.5em;
+        font-size: 1.7em;
         font-family: 'Pattaya', sans-serif;
     }
     nav{
@@ -181,12 +181,33 @@ body{
 
     main > section{
         background-color: #2e86de;
+        position: relative;
         height: 50vh;
         display: flex;
         flex-direction: column;
     }
     .img_lead{
-        width: 15em;
+        /* width: 15em; */
+        width: 60vw;
+        position: absolute;
+        right: 0;
+        top: 2em;
+    }
+    #logo_hero {
+        position: absolute;
+        font-size: 1.8rem;
+        right: 8vw;
+        bottom: 1em;
+    }
+    section h3{
+        position: absolute;
+        text-align: left;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.7rem;
+        width: 40vw;
+        top: 4em;
+        left: 5vw;
+        font-weight: 600;
     }
 }
 
