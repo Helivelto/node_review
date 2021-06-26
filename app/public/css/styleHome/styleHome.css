@@ -131,7 +131,7 @@ body{
     }
     .box_review{
         width: 90vw;
-        height: 9em;
+        min-height: 9em;
         margin: auto;
         padding: 1em;
         border-radius: 8px;

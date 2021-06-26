@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-        <!-- css -->
-        <!-- css -->
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/styleHome/styleHome.css">
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <!-- Pattaya -->
-        <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
-        <!-- Roboto -->
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Reviews</title>
+    <!-- css -->
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styleHome/styleHome.css">
+    <link rel="stylesheet" href="css/styleProdutos/styleProdutos.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Pattaya -->
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+    <!-- Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <header>
-        
-        <span class="logo"><a href="/">Reviewr.com</a></span>
+    <div id="container">
 
-        <nav>
-            <input type="checkbox" name="menu_checkbox" id="menu_checkbox">
+        <header>
+
+            <span class="logo"><a href="/">Reviewr.com</a></span>
+
+            <nav>
+                <input type="checkbox" name="menu_checkbox" id="menu_checkbox">
                 <div class="menu_bar" id="bar1"></div>
                 <div class="menu_bar" id="bar2"></div>
                 <div class="menu_bar" id="bar3"></div>
-                
+
                 <div class="menu">
                     <ul class="menu_ul">
                         <li><a href="">Usuario</a></li>
@@ -35,28 +40,38 @@
                         <li><a href="reviews">Reviews</a></li>
                     </ul>
                 </div>
-        </nav>
+            </nav>
 
-    </header>
+        </header>
 
-    <main>
 
-        <div id="box_main">
+        <main>
 
-            <% for(let i = 0; i < reviews.length; i++){%>
-            <div class="box_review">
-                <span id="span_autor"><%= reviews[i].autor %></span>
-                <a href="review?id=<%=reviews[i].id%>"><%= reviews[i].titulo_review %></a> 
-                <span id="span_produto"><%= reviews[i].produto %></span>
+            <div id="box_main">
+
+                <% for(let i=0; i < reviews.length; i++){%>
+                    <div class="box_review">
+                        <span id="span_autor">
+                            <%= reviews[i].autor %>
+                        </span>
+                        <a href="review?id=<%=reviews[i].id%>">
+                            <%= reviews[i].titulo_review %>
+                        </a>
+                        <span id="span_produto">
+                            <%= reviews[i].produto %>
+                        </span>
+                    </div>
+                    <br>
+                    <% } %>
+
             </div>
-                <br>
-            <%  }   %>
 
-        </div>
+        </main>
 
-    </main>
-    
+    </div>
+
     <!-- <td class="testan"><a href="review">Visualisar</a></td> -->
     <script src="js/scriptProdutos/scriptProdutos.js"></script>
 </body>
+
 </html>
