@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
         <!-- css -->
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/styleHome/styleHome.css">
+        <link rel="stylesheet" href="/css/reset.css">
+        <link rel="stylesheet" href="/css/styleHome/styleHome.css">
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <!-- Pattaya -->
@@ -44,7 +44,7 @@
 
             <section>
                 <h3>Crie Reviews sobre qualquer coisa.</h3>
-                <img src="img/cartoon_celular.png" alt="" class="img_lead">
+                <img src="/img/cartoon_celular.png" alt="" class="img_lead">
                 <span class="logo" id="logo_hero">Reviewr.com</span>
             </section>
 
@@ -55,7 +55,7 @@
                 <% for(let i = 0; i < reviews.length; i++){%>
                 <div class="box_review">
                     <span id="span_autor"><%= reviews[i].autor %></span>
-                    <a href="review?id=<%=reviews[i].id%>"><%= reviews[i].titulo_review %></a> 
+                    <a href="/review?id=<%=reviews[i].id%>"><%= reviews[i].titulo_review %></a> 
                     <span id="span_produto"><%= reviews[i].produto %></span>
                 </div>
                     <br>

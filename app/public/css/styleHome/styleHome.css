@@ -65,7 +65,7 @@ body{
         transform: rotate(-45deg);
         transition: transform 0.3s;
     }
-    .menu{
+    /* .menu{
         
     }
     .menu_ul{
@@ -82,7 +82,7 @@ body{
 
         transform: translateY(-100px);
         z-index: 1;
-    }
+    } */
     .menu_ul li{
         margin: 1em;
     }
