@@ -1,0 +1,284 @@
+/* ESTILO DE PÁGINA */
+body{
+    background-color: #2C3E50;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+
+/* ESTILO DA PÁGGINA INICIAL */
+#in_box{
+    height: 8vh;
+}
+.inicio_login{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transition: transform 1s;
+    animation: fade_icon 1s ease-out forwards;
+}
+.inicio_login > img{
+    min-width: 23vw;
+    max-width: 24vw;
+}
+.login_text{
+    margin-top: 1.2em;
+    font-size: 1.8em;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    align-self: flex-start;
+}
+section{
+    height: 100vh;
+}
+
+/* ESTILO DOS INPUTS */
+.inputs{
+    width: 75vw;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2vh;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    flex-direction: column;
+    margin-top: 2vh;
+    opacity: 1;
+    animation: fade_inputs 1s ease-out forwards;
+    transition-duration: 1s;
+}
+.input{
+    width: 75vw;
+    height: 2em;
+    background-color: transparent;
+    border-radius: 10px;
+    border: solid 1px #fff;
+    outline: none;
+    color: #fff;
+    font-size: 1rem;
+    margin-top: .5em;
+}
+.inputs-label{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(214, 210, 210);
+    margin-top: 2em;
+}
+.inputs-box_input{
+    margin-top: 2em;
+}
+.input:focus, .input:valid{
+    border-color: #10ac84;
+}
+.border_red{
+    border: 1px solid red;
+    transition: 0.5s;
+}
+.border_green{
+    border: 1px solid #30b869;
+    transition: 0.2s;
+}
+
+/* ESTILO DOS COMPONENTES DO BOTÃO LOGIN/CADASTRO */
+.cadastro-btn{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: bolder;
+    border: none;
+    width: 75vw;
+    height: 2em;
+    background-color: #30b869;
+    border-radius: 10px;
+    outline: none;
+    margin-top: 3em;
+    color: #fff;
+}
+.scale_button{
+    animation-name: scale_button; 
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    transition: transform 1.5s cubic-bezier(0.87, 0, 0.13, 1);
+}
+.cadastro-span{
+    margin-top: 2vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #f5f6fa;
+    display: flex;
+    justify-content: center;
+}
+.inputs a{
+    color: #2ECC71;
+    display: flex;
+    flex-wrap: wrap;
+    text-decoration: none;
+    margin-top: 1vh;
+    justify-content: center;
+}
+.inputs a::after, .inputs a::before{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    height: 0.5em;
+    min-width: 20vw;
+    max-width: 23vw;
+    border-top: 1px solid #2ECC71;
+    z-index: -1;
+}
+.inputs a::before{
+    left: auto;
+    right: 10px;
+}
+
+
+
+/* Mobile */ 
+@media only screen and (max-width: 480px) {
+    #container{
+        height: 100vh;
+    }
+
+/* ESTILO DA PÁGGINA INICIAL */
+
+/* ESTILO DOS INPUTS */
+    .inputs{
+        margin-top: 4vh;
+    }
+
+/* ESTILO DOS COMPONENTES DO BOTÃO LOGIN/CADASTRO */
+    .cadastro-span{
+        margin-top: 2vh;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.8rem;
+        color: #f5f6fa;
+        display: flex;
+        justify-content: center;
+    }
+    .cadastro-btn{
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        font-weight: bolder;
+        border: none;
+        width: 75vw;
+        background-color: #30b869;
+        border-radius: 10px;
+        outline: none;
+        margin-top: 2.5em;
+        color: #fff;
+    }
+
+}
+
+
+/* Tablet */
+@media only screen and  (min-width: 481px) and (max-width: 839px){
+    #container{
+        height: 100vh;
+    }
+
+/* ESTILO DA PÁGGINA INICIAL */
+
+/* ESTILO DOS INPUTS */
+    .inputs{
+        margin-top: 7vh;
+    }
+    .input{
+        width: 75vw;
+        height: 3em;
+        background-color: transparent;
+        border-radius: 10px;
+        border: solid 1px #fff;
+        outline: none;
+        color: #fff;
+        font-size: 1rem;
+        margin-top: .5em;
+    }
+
+/* ESTILO DOS COMPONENTES DO BOTÃO LOGIN/CADASTRO */
+    .inputs a{
+        font-size: 1.5rem;
+    }
+    .inputs a::after, .inputs a::before{
+        min-width: 22vw;
+        width: 45vw;
+    }
+    .cadastro-span{
+        font-size: 1.3rem;
+    }
+    .inputs-label{
+        font-size: 1.3rem;
+    }
+    .login_text{
+        font-size: 2.7rem;
+    }
+    .cadastro-btn{
+        font-size: 1.7rem;
+        margin-top: 2.5em;
+    }
+}
+
+
+/* Desktop */
+@media only screen and (min-width: 840px) and (max-width: 1024px){
+    #container{
+        width: 90vmin;
+        margin: 0 auto;
+        height: 100vmax;
+        background-color: blue;
+    }
+}
+
+/* Telas maiores */
+@media only screen and (min-width: 1025px){
+    #container{
+        width: 80vmin;
+        margin: 0 auto;
+        height: 100vmax;
+        background-color: gray;
+    }
+}
+
+
+/* CSS ANIMATIONS E TRANSFORMS */
+/* ANIMAÇÃO DO CLIQUE DO BOTÃO */
+@keyframes scale_button{
+    50%{
+        transform: scale(1.1, 1.1);
+    }
+    100%{
+        transform: scale(0, 0);
+    }
+}
+/* ANIMAÇÃO DE FADE DOS INPUTS */
+@keyframes fade_inputs{
+    from{
+        transform: translatex(-50%);
+    }
+    to{
+        transform: translatex(0%);
+        opacity: 1;
+    }
+}
+/* ANIMAÇÃO DE FADE DO ICONE DO INCIO */
+@keyframes fade_icon{
+    from{
+        transform: translatex(-50%);
+    }
+    to{
+        transform: translatex(0%);
+        opacity: 1;
+    }
+}
+/*  TRANSFORM DA PAGINA APÓS EFETUAR LOGIN/CADASTRO*/
+.downgrade{
+    transform: translateY(100px);
+    transition-delay: 1.4s;
+    transition-duration: 1s;
+    opacity: 0;
+}

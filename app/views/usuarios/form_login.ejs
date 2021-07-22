@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- <!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,4 +22,74 @@
     
     </form>
 </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!-- FAV-ICON -->
+    <link rel="shortcut icon" href="img/userpng.png">
+    <!-- ESTILOS DA PÁGINA -->
+    <link rel=stylesheet href="/css/styleForms/styleLogin.css">
+    
+</head>
+
+<body>
+    <div id="container">
+
+        <main>
+            
+            <section id="section_login">
+
+                <div id="in_box"></div>
+
+                <div class="inicio_login">
+                    <img src="/img/userpng.png" alt="Imagem generica de usuario">
+                </div>
+
+                <div class="inputs">
+                    <span class="login_text">Login</span>
+
+                    <form action="/usuario/login" method="post" id="main_form">
+
+                        <div class="inputs-box_input">
+                            <label for="email_usuario" class="inputs-label">Email</label>
+                            <input type="text" name="email_usuario" id="user_email" class="input" 
+                            maxlength="50" minlength="8" required>
+                        </div>
+
+                        <div class="inputs-box_input">
+                            <label for="senha_usuario" class="inputs-label">Senha</label>
+                            <input type="password" name="senha_usuario" id="password-input" 
+                            class="input" maxlength="15" minlength="5" required>
+                        </div>
+
+                        <div class="login_components">
+                            <button type="submit" class="cadastro-btn">Login</button>
+                            <span class="cadastro-span">Se você ainda não possui uma conta</span>
+                            <span><a href="/cadastro">Cadastre-se</a></span>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- <script src="js/script_login.js"></script> -->
+</body>
+
 </html>
