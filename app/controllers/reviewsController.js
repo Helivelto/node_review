@@ -20,3 +20,19 @@ module.exports.review = (application, req, res) => {
         res.render("reviews/review", {review: result})
     })   
 }
+
+
+module.exports.add_new_review = (application, req, res) => {
+    res.render('reviews/add_new_review')
+}
+
+
+module.exports.new_review = (application, req, res) => {
+    const review = req.body;
+
+    const connection = application.config.dbConnection;
+    const reviewsDao = new application.app.models.ReviewsDAO(connection)
+    reviewsDao.salvarReview(review, (error, result) => {
+        res.redirect('/reviews')
+    })
+}
