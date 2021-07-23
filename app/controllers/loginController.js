@@ -2,6 +2,7 @@ module.exports.form_login = (application, req, res) => {
     res.render('usuarios/form_login')
 }
 
+
 module.exports.login_usuario = (application, req, res) => {
 
     const obj_usuario = req.body
@@ -25,10 +26,10 @@ module.exports.login_usuario = (application, req, res) => {
 
 
 
-
 module.exports.form_cadastro = (application, req, res) => {
     res.render('usuarios/form_cadastro')
 }
+
 
 module.exports.cadastro_usuario = (application, req, res) => {
 
@@ -39,14 +40,17 @@ module.exports.cadastro_usuario = (application, req, res) => {
 
     usersDao.cadastro(obj_usuario, (error, result) => {
         
-        console.log(obj_usuario)
-        console.log(result)
+        // console.log(obj_usuario)
+        // console.log(result)
 
-        if(obj_usuario.length > 0){
-            res.redirect('/home/usuario')
-        } else {
-            res.send('Email ou senha incorretos')
-        }
+
+        res.redirect('/home/usuario')
+
+        // if(obj_usuario.length > 0){
+        //     res.redirect('/home/usuario')
+        // } else {
+        //     res.send('Email ou senha incorretos')
+        // }
         
     })
 

@@ -23,12 +23,26 @@ module.exports.review = (application, req, res) => {
 
 
 module.exports.add_new_review = (application, req, res) => {
-    res.render('reviews/add_new_review')
+    res.render('reviews/add_new_review', {validacao: {}, review: {}})
 }
 
 
 module.exports.new_review = (application, req, res) => {
-    const review = req.body;
+    var review = req.body;
+
+    // Validando dados
+    req.assert('titulo_review', 'O titulo do review precisa ter entre 5 e 30 caracteres').len(5, 30)
+    req.assert('review', 'O conteúdo do seu review precisa ter entre 10 e 500 caracteres').len(10, 500)
+    req.assert('tema', 'O seu tema precisa ter entre 10 e 50 caracteres!').len(10, 50)
+
+
+    const erros = req.validationErrors()
+
+    if(erros){
+        res.render('reviews/add_new_review', { validacao: erros, review: review })
+        // console.log(erros)
+        return;
+    }
 
     const connection = application.config.dbConnection;
     const reviewsDao = new application.app.models.ReviewsDAO(connection)
