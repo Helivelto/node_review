@@ -40,17 +40,16 @@ module.exports.cadastro_usuario = (application, req, res) => {
 
     usersDao.cadastro(obj_usuario, (error, result) => {
         
-        // console.log(obj_usuario)
-        // console.log(result)
+        console.log(obj_usuario)
+        console.log(result)
 
+        // res.redirect('/home/usuario')
 
-        res.redirect('/home/usuario')
-
-        // if(obj_usuario.length > 0){
-        //     res.redirect('/home/usuario')
-        // } else {
-        //     res.send('Email ou senha incorretos')
-        // }
+        if(result.warningCount == 0){
+            res.redirect('/home/usuario')
+        } else {
+            res.send('Email ou senha incorretos')
+        }
         
     })
 

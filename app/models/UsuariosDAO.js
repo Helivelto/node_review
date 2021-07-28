@@ -13,9 +13,8 @@ UsersDAO.prototype.login = function(obj_usuario, callback){
 // }
 
 
-
 UsersDAO.prototype.cadastro = function(obj_usuario, callback){
-    this._connection.query('insert into usuarios set ?', obj_usuario, callback)
+    this._connection.query('insert into usuarios set ? ', obj_usuario, callback)
 }
 
 module.exports = () => {
