@@ -14,4 +14,8 @@ module.exports = (application) => {
     application.post('/new/reviews', (req, res) => {
         application.app.controllers.reviewsController.new_review(application, req, res);
     })
+
+    // application.post('/review/comentario', (req, res) => {
+    //     application.app.controllers.
+    // })
 }
