@@ -164,7 +164,7 @@ body{
         font-family: 'Roboto Mono', monospace;
         /* margin-bottom: .5em; */
     }
-    #span_produto{
+    .box_review span:last-child{
         margin: 0px;
         font-family: 'Roboto Mono', monospace;
     }

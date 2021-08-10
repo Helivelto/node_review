@@ -12,21 +12,7 @@
     .logo a{
         color: white;
         text-decoration: none;
-    }
-    p{
-        color: #2f3542;
-    }
-    .review_box span{
-        margin-top: 2vh;
-        font-size: 1.4rem;
-        color: #2f3542;
-    }
-    #span_titulo{
-        margin-top: 2vh;
-        margin-bottom: 2vh;
-        font-size: 1.5rem;
-        font-weight: bolder;
-    }        
+    }     
     .review_box a{
         color: #2f3542;
         text-decoration: none;
@@ -36,12 +22,30 @@
         margin-bottom: auto;
         justify-self: center;
     }
-    #span_produto{
-        font-size: 1.4rem;
+
+    #box_main{
+        margin-top: 3em;
+    }
+
+    .review_box span:nth-child(1){
+        margin-top: 1em;
+        font-size: 1.3rem;
+        color: #2f3542;
+    } 
+    .review_box span:nth-child(2){
+        margin-top: 1em;
+        font-size: 1.6rem;
+        font-weight: bolder;
+    }  
+    .review_box span:nth-child(3){
+        font-size: 1.2rem;
+        color: #2f3542;
+        margin-top: .7em;
     }
     .review_box p{
-        margin-top: 3em;
-        font-size: 1.4rem;
+        margin-top: 1.5em;
+        font-size: 1.3rem;
+        color: #2f3542;
     }
 }
 
