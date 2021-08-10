@@ -1,6 +1,6 @@
 /* ESTILO DE PÁGINA */
 body{
-    background-color: #2C3E50;
+    background-color: #ced6e0;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -57,7 +57,7 @@ section{
     height: 2em;
     background-color: transparent;
     border-radius: 10px;
-    border: solid 1px #fff;
+    border: solid 2px #2C3E50;;
     outline: none;
     color: #fff;
     font-size: 1rem;

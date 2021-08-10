@@ -11,7 +11,7 @@ body{
 /* Mobile */
 @media only screen and (max-width: 480px){
     #container{
-        height: 100vh;
+        height: 100%;
         width: 100vw;
     }
     header{
@@ -21,10 +21,12 @@ body{
         /* background-color: #9c88ff; */
         background-color: #30b869;
         display: flex;
+        position: sticky;
+        overflow: visible;
+        top: 0em;
         align-items: center;
         justify-content: space-between;
-        /* position: fixed;
-        z-index: 2; */
+        z-index: 5000;
     }
     .logo{
         font-size: 1.7em;
@@ -88,7 +90,7 @@ body{
         font-weight: bold;
 
         transform: translateX(-200%);
-        transition: 1s ease-out;
+        transition: 0.8s ease-out;
         z-index: 1;
     }
     #menu_checkbox:checked ~ .menu ul{
@@ -129,7 +131,7 @@ body{
     } */
     main > h2{
         margin-left: 5vw;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Roboto Mono', monospace;
         color: #2f3542;
         font-size: 1.6rem;
         font-weight: bold;
@@ -148,21 +150,23 @@ body{
     .box_review a{
         color: #000;
         text-decoration: none;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: bolder;
         margin-top: auto;
         margin-bottom: auto;
         justify-self: center;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Roboto Mono', monospace;
     }
     .box_review span{
         color: #2f3542;
-        font-size: 1.1rem;
+        font-size: 1rem;
         margin-top: .5em;
+        font-family: 'Roboto Mono', monospace;
         /* margin-bottom: .5em; */
     }
     #span_produto{
         margin: 0px;
+        font-family: 'Roboto Mono', monospace;
     }
     #box_main{
         margin-top: 3vh;
@@ -171,7 +175,7 @@ body{
         border-radius: 15px;
         background-color: #30b869;
         height: 7vh;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Roboto Mono', 'Arial' monospace;
         color: #fff;
         display: flex;
         /* margin-top: 3vh;

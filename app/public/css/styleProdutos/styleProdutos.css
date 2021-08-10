@@ -13,9 +13,13 @@
         color: white;
         text-decoration: none;
     }
+    p{
+        color: #2f3542;
+    }
     .review_box span{
         margin-top: 2vh;
         font-size: 1.4rem;
+        color: #2f3542;
     }
     #span_titulo{
         margin-top: 2vh;
@@ -24,13 +28,13 @@
         font-weight: bolder;
     }        
     .review_box a{
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: bolder;
-    margin-top: auto;
-    margin-bottom: auto;
-    justify-self: center;
+        color: #2f3542;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: bolder;
+        margin-top: auto;
+        margin-bottom: auto;
+        justify-self: center;
     }
     #span_produto{
         font-size: 1.4rem;
