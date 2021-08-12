@@ -1,11 +1,7 @@
 *{
     box-sizing: border-box;
 }
-/* a:-webkit-any-link {
-    color: -webkit-link;
-    cursor: pointer;
-    text-decoration: none;
-} */
+
 
 /* Mobile */
 @media only screen and (max-width: 480px){
@@ -18,32 +14,34 @@
         text-decoration: none;
         font-size: 1.5rem;
         font-weight: bolder;
+
         margin-top: auto;
         margin-bottom: auto;
-        justify-self: center;
-    }
 
-    #box_main{
-        margin-top: 3em;
+        justify-self: center;
     }
 
     .review_box span:nth-child(1){
         margin-top: 1em;
+
         font-size: 1.3rem;
         color: #2f3542;
     } 
     .review_box span:nth-child(2){
         margin-top: 1em;
+
         font-size: 1.6rem;
         font-weight: bolder;
     }  
     .review_box span:nth-child(3){
         font-size: 1.2rem;
+
         color: #2f3542;
         margin-top: .7em;
     }
     .review_box p{
         margin-top: 1.5em;
+        
         font-size: 1.3rem;
         color: #2f3542;
     }

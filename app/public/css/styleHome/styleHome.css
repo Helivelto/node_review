@@ -14,6 +14,9 @@ body{
         height: 100%;
         width: 100vw;
     }
+
+    
+    /* --- header --- */
     header{
         height: 13vh;
         width: 100vw;
@@ -34,6 +37,7 @@ body{
         font-size: 1.7em;
         font-family: 'Pattaya', sans-serif;
     }
+    /* --- Menu --- */
     nav{
         display: flex;
         justify-content: center;
@@ -114,6 +118,46 @@ body{
     }
 
 
+    /* --- Main --- */
+    /* Section - Main */
+    main > section{
+        background-color: #16a085;
+
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        height: 50vh;
+    }
+    .img_lead{
+        width: 60vw;
+
+        position: absolute;
+        right: 0;
+        top: 2em;
+    }
+    #logo_hero {
+        position: absolute;
+        right: 8vw;
+        bottom: 1em;
+
+        font-size: 1.8rem;
+    }
+    section h3{
+        width: 40vw;
+
+        position: absolute;
+        top: 3em;
+        left: 5vw;
+
+        text-align: left;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+    #box_main{
+        margin-top: 3vh;
+    }
     main > h2{
         margin-left: 5vw;
         margin-top: 8vh;
@@ -123,6 +167,7 @@ body{
         font-size: 1.6rem;
         font-weight: bold;
     }
+    /* Div Review */
     .box_review{
         width: 90vw;
         min-height: 9em;
@@ -159,9 +204,9 @@ body{
 
         font-family: 'Roboto Mono', monospace;
     }
-    #box_main{
-        margin-top: 3vh;
-    }
+
+
+    /* --- footer --- */
     #create_post{
         height: 7vh;
 
@@ -192,39 +237,6 @@ body{
         font-weight: bold;
 
         margin: auto;
-    }
-
-    main > section{
-        background-color: #16a085;
-
-        position: relative;
-        display: flex;
-        flex-direction: column;
-
-        height: 50vh;
-    }
-    .img_lead{
-        width: 60vw;
-        
-        position: absolute;
-        right: 0;
-        top: 2em;
-    }
-    #logo_hero {
-        position: absolute;
-        font-size: 1.8rem;
-        right: 8vw;
-        bottom: 1em;
-    }
-    section h3{
-        position: absolute;
-        text-align: left;
-        font-family: 'Roboto', sans-serif;
-        font-size: 1.6rem;
-        width: 40vw;
-        top: 3em;
-        left: 5vw;
-        font-weight: 600;
     }
 
 
