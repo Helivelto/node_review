@@ -5,12 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/styleForms/style_add_review.css">
+            <!-- css -->
+            <link rel="stylesheet" href="/css/reset.css">
+            <link rel="stylesheet" href="/css/styleHome/styleHome.css">
+            <!-- Google Fonts -->
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <!-- Pattaya -->
+            <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+            <!-- Roboto -->
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"> <!-- Roboto Mono-->
 </head>
 <body>
 
 <div class="container">
 
-    
+    <header>
+
+        <span class="logo">Reviewr.com</span>
+
+        <nav>
+            <input type="checkbox" name="menu_checkbox" id="menu_checkbox">
+                <div class="menu_bar" id="bar1"></div>
+                <div class="menu_bar" id="bar2"></div>
+                <div class="menu_bar" id="bar3"></div>
+                
+                <div class="menu">
+                    <ul class="menu_ul">
+                        <li><a href="/login">Fazer Login</a></li>
+                        <li><a href="add-new-review">Fazer Review</a></li>
+                        <li><a href="reviews">Reviews</a></li>
+                    </ul>
+                </div>
+        </nav>
+
+    </header>
+
     <% if(validacao.length > 0){ %>
         <div class="row">
             <div class="col-md-12">
@@ -28,20 +59,29 @@
     <% } %>
 
 
-    <form action='/new/reviews' method="post">
+    <main>
 
-        <input type="text" name="titulo_review" id="review_titulo"  minlength="5" maxlength="30" placeholder="Titulo do Review">
+        <h3>Faça o seu Review</h3>
 
-        <textarea name="review" id="review" placeholder="Review" cols="30" rows="10" minlength="10" maxlength="500"></textarea>
+        <form action='/new/reviews' method="post" class="inputs">
 
-        <input type="text" name="tema" id="review_produto"  minlength="10" maxlength="50" placeholder="Nome do produto">
+            <label for="titulo_review" class="inputs-label">Título do Review</label>
+            <input type="text" name="titulo_review" id="review_titulo" class="input" minlength="5" maxlength="30" >
 
-        <input type="text" name="autor" id="review_autor">
+            <label for="tema" class="inputs-label">Tema do Review</label>
+            <input type="text" name="tema" id="review_produto" class="input"  minlength="10" maxlength="50">
 
-        <input type="submit" value="Postar Review">
+            <label for="autor" class="inputs-label">Autor do Review</label>
+            <input type="text" name="autor" id="review_autor" class="input">
 
-    </form>
+            <label for="review" class="inputs-label">Review</label>
+            <textarea name="review" id="review" class="input" cols="30" rows="10" minlength="10" maxlength="500"></textarea>
 
+            <input type="submit" id="postar_review" value="Postar Review">
+
+        </form>
+
+    </main>
 
 </div>
 

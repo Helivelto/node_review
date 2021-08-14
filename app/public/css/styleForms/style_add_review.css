@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ecf0f1;
+    /* background-color: #353b48; */
+    background-color: #ced6e0;
+}
+
+@media only screen and (max-width: 480px){
+#container{
+    height: 100%;
+    width: 100vw;
+}
+/* Main */
+main > h3{
+    margin-left: 7.5vw;
+    margin-top: 3vh;
+
+    font-family: 'Roboto Mono', monospace;
+    color: #2f3542;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.row{
+    height: 110%;
+    width: 90vw;
+
+    margin-left: 5vw;
+    margin-bottom: 3em;
+
+    padding: 1vw;
+
+    color: rgba(236, 240, 241,1.0);
+
+    background-color: rgba(231, 76, 60, .5);
+
+}
+.row ul li{
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: .9rem;
+
+    margin-top: .5em;
+}
+/* ESTILO DOS INPUTS */
+.inputs{
+    width: 85vw;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2vh;
+    align-self: center;
+    flex-direction: column;
+    margin-top: 2vh;
+    opacity: 1;
+    animation: fade_inputs 1s ease-out forwards;
+    transition-duration: 1s;
+}
+.input{
+    width: 85vw;
+    height: 2em;
+    background-color: transparent;
+    border-radius: 10px;
+    border: solid 2px #636e72;
+    outline: none;
+    color: #636e72;
+    font-size: 1rem;
+    margin-top: .3em;
+}
+#review{
+    height: 10em;
+}
+.inputs-label{
+    font-family: 'Roboto', sans-serif;
+    color: #636e72;
+    margin-top: 2em;
+}
+.inputs-box_input{
+    margin-top: 2em;
+}
+.input:focus, .input:valid{
+    border-color: #10ac84;
+}
+.border_red{
+    border: 1px solid red;
+    transition: 0.5s;
+}
+.border_green{
+    border: 1px solid #30b869;
+    transition: 0.2s;
+}
+#postar_review{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: bolder;
+    border: none;
+    width: 85vw;
+    height: 2em;
+    background-color: #30b869;
+    border-radius: 10px;
+    outline: none;
+    margin-top: 3em;
+    color: #fff;
+}
+}

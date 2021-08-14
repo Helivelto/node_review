@@ -29,7 +29,7 @@ body{
     font-size: 1.8em;
     font-weight: bolder;
     font-family: 'Roboto', sans-serif;
-    color: #fff;
+    color: #636e72;
     align-self: flex-start;
 }
 section{
@@ -57,15 +57,15 @@ section{
     height: 2em;
     background-color: transparent;
     border-radius: 10px;
-    border: solid 2px #2C3E50;;
+    border: solid 2px #636e72;
     outline: none;
-    color: #fff;
+    color: #636e72;
     font-size: 1rem;
     margin-top: .5em;
 }
 .inputs-label{
     font-family: 'Roboto', sans-serif;
-    color: rgb(214, 210, 210);
+    color: #636e72;
     margin-top: 2em;
 }
 .inputs-box_input{
@@ -156,7 +156,7 @@ section{
         margin-top: 2vh;
         font-family: 'Roboto', sans-serif;
         font-size: 0.8rem;
-        color: #f5f6fa;
+        color: #636e72;
         display: flex;
         justify-content: center;
     }
