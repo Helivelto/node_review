@@ -47,6 +47,6 @@ module.exports.new_review = (application, req, res) => {
     const connection = application.config.dbConnection;
     const reviewsDao = new application.app.models.ReviewsDAO(connection)
     reviewsDao.salvarReview(review, (error, result) => {
-        res.redirect('/reviews')
+        res.redirect('/home/usuario')
     })
 }
