@@ -105,13 +105,8 @@ nav{
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
 
-    transform: translateX(-200%);
-    transition: 0.5s ease-out;
-    z-index: 1;
 }
-#menu_checkbox:checked ~ .menu ul{
-    transform: translateX(0%);
-}
+
 
 .menu_ul li{
     margin: 1em;
@@ -136,6 +131,7 @@ main > section{
     justify-content: space-between;
 
     height: 100%;
+    width: 100%;
 }
 .img_lead{
     width: 50%;
@@ -262,56 +258,89 @@ main > h2{
 
 /* Mobile */
 @media only screen and (max-width: 480px){
-    #container{
-        height: 100%;
-        width: 100vw;
+    header{
+        width: 100%;
     }
-
-    /* .img_lead{
-        width: 60vw;
-    
-        position: absolute;
-        right: 0;
-        top: 2em;
-    } */
+    .menu_ul{
+        transform: translateX(-200%);
+        transition: 0.5s ease-out;
+        z-index: 1;
+    }
+    #menu_checkbox:checked ~ .menu ul{
+        transform: translateX(0%);
+    }
 }
 
 
 /* Tablet */
 @media only screen and (min-width: 481px) and (max-width: 839px){
-    #container{
-        height: 100%;
-        width: 100%;
-    }
-
     header{
         width: 100%;
     }
-
-    /* .img_lead{
-        min-width: 50vw;
-        max-width: 55vw;
-    
-        position: absolute;
-        right: 0;
-        top: 1em;
-
-        align-self: center;
-    } */
+    .menu_ul{
+        transform: translateX(-200%);
+        transition: 0.5s ease-out;
+        z-index: 1;
+    }
+    #menu_checkbox:checked ~ .menu ul{
+        transform: translateX(0%);
+    }
 }
 
 
 /* Desktop */
 @media only screen and (min-width: 840px) and (max-width: 1024px){
-    #container{
-        background-color: violet;
+    header{
+        width: 100%;
+        height: 10vh;
+    }
+    nav .menu_bar, input{
+        display: none;
+    }
+    .menu_ul{
+        height: 100%;
+        width: 70%;
+    
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    
+        position: absolute;
+        top: 0;
+
+        padding: 1em;
+
+        font-size: 1.6rem;
+    
+        background-color: #30b869;
     }
 }
 
 
 /* Telas Maiores */
 @media only screen and (min-width: 1025px){
-    #container{
-        background-color: green;
+    header{
+        width: 100%;
+        height: 10vh;
+    }
+    nav .menu_bar, input{
+        display: none;
+    }
+    .menu_ul{
+        height: 100%;
+        width: 70%;
+    
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    
+        position: absolute;
+        top: 0;
+        
+        padding: 1em;
+
+        font-size: 1.6rem;
+    
+        background-color: #30b869;
     }
 }
