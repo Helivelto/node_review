@@ -159,9 +159,10 @@ section h3{
 #box_main{
     margin-top: 3vh;
 }
-main > h2{
+main h2{
     margin-left: 5vw;
     margin-top: 8vh;
+    margin-bottom: 3vh;
 
     font-family: 'Roboto Mono', monospace;
     color: #2f3542;
@@ -183,7 +184,7 @@ main > h2{
     flex-direction: column;
 }
 .box_review a{
-    color: #000;
+    color: #2d3436;
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: bolder;
@@ -328,7 +329,31 @@ main > h2{
 
     section h3{
         width: 35vw;
-        font-size: 2.5rem;
+        font-size: 2.7rem;
+    }
+    #box_main{
+        width: 60vw;
+
+        display: flex;
+        flex-direction: column;
+
+        margin-top: 3vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    main h2{
+        margin-top: 8vh;
+        margin-left: 0;
+        margin-bottom: 3vh;
+    }
+    .box_review{
+        width: 100%;
+        min-height: 9em;
+        margin: auto;
+    }
+
+    #create_post{
+        width: 15vw;        
     }
     
 }
@@ -338,7 +363,7 @@ main > h2{
 @media only screen and (min-width: 1025px){
     header{
         width: 100%;
-        height: 10vh;
+        height: 6vh;
     }
 
     .logotipo{
@@ -374,5 +399,29 @@ main > h2{
     section h3{
         width: 35vw;
         font-size: 2.7rem;
+    }
+    #box_main{
+        width: 60vw;
+
+        display: flex;
+        flex-direction: column;
+
+        margin-top: 3vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    main h2{
+        margin-top: 8vh;
+        margin-left: 0;
+        margin-bottom: 3vh;
+    }
+    .box_review{
+        width: 100%;
+        min-height: 9em;
+        margin: auto;
+    }
+
+    #create_post{
+        width: 15vw;        
     }
 }
