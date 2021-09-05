@@ -14,13 +14,14 @@
         <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
         <!-- Roboto -->
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"> <!-- Roboto Mono-->
 </head>
 <body>
     <div id="container">
 
         <header>
 
-            <span class="logo">Reviewr.com</span>
+            <span class="logotipo">Reviewr.com</span>
 
             <nav>
                 <input type="checkbox" name="menu_checkbox" id="menu_checkbox">
@@ -45,12 +46,13 @@
             <section>
                 <h3>Crie Reviews sobre qualquer coisa.</h3>
                 <img src="/img/cartoon_celular.png" alt="" class="img_lead">
-                <span class="logo" id="logo_hero">Reviewr.com</span>
             </section>
 
 
-            <h2>Útimas Publicações</h2>
+            
             <div id="box_main">
+
+                <h2>Útimas Publicações</h2>
 
                 <% for(let i = 0; i < reviews.length; i++){%>
                 <div class="box_review">
@@ -63,16 +65,16 @@
 
             </div>
 
-            <div class="rodape">
-                <!-- <div id="cta"><a href="reviews">Ver Mais Reviews</a></div> -->
-                <div id="create_post"><a href="/add-new-review">Criar Review</a></div>
-            </div>
-
         </main>
 
 
         <footer>
+            <div id="final_msg"><h1>Fim.</h1></div>
 
+            <div class="rodape">
+                <!-- <div id="cta"><a href="reviews">Ver Mais Reviews</a></div> -->
+                <div id="create_post"><a href="/add-new-review">Criar Review</a></div>
+            </div>
         </footer>
 
     </div>
