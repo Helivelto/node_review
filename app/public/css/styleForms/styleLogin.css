@@ -84,18 +84,41 @@ section{
 }
 
 /* ESTILO DOS COMPONENTES DO BOTÃO LOGIN/CADASTRO */
+.login_components{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .cadastro-btn{
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     font-weight: bolder;
     border: none;
     width: 75vw;
+    height: 4.5vh;
     height: 2em;
     background-color: #30b869;
     border-radius: 10px;
     outline: none;
     margin-top: 3em;
     color: #fff;
+}
+.outra_opcao-btn{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: bolder;
+    border: none;
+    width: 75vw;
+    height: 4.5vh;
+    background-color: #30b869;
+    border-radius: 10px;
+    outline: none;
+    margin-top: 1.5em;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .scale_button{
     animation-name: scale_button; 
@@ -105,7 +128,7 @@ section{
     transition: transform 1.5s cubic-bezier(0.87, 0, 0.13, 1);
 }
 .cadastro-span{
-    margin-top: 2vh;
+    margin-top: 1.5vh;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     color: #f5f6fa;
@@ -113,23 +136,11 @@ section{
     justify-content: center;
 }
 .inputs a{
-    color: #2ECC71;
+    color: #fff;
     display: flex;
     flex-wrap: wrap;
     text-decoration: none;
-    margin-top: 1vh;
     justify-content: center;
-}
-.inputs a::after, .inputs a::before{
-    content:"";
-    position: absolute;
-    bottom: 0;
-    left: 10px;
-    height: 0.5em;
-    min-width: 20vw;
-    max-width: 23vw;
-    border-top: 1px solid #2ECC71;
-    z-index: -1;
 }
 .inputs a::before{
     left: auto;
@@ -153,9 +164,9 @@ section{
 
 /* ESTILO DOS COMPONENTES DO BOTÃO LOGIN/CADASTRO */
     .cadastro-span{
-        margin-top: 2vh;
+        margin-top: 2.3vh;
         font-family: 'Roboto', sans-serif;
-        font-size: 0.8rem;
+        font-size: 1rem;
         color: #636e72;
         display: flex;
         justify-content: center;
@@ -166,13 +177,16 @@ section{
         font-weight: bolder;
         border: none;
         width: 75vw;
+        height: 4.5vh;
         background-color: #30b869;
         border-radius: 10px;
         outline: none;
         margin-top: 2.5em;
         color: #fff;
     }
-
+    .outra_opcao-btn{
+        margin-top: 1em;
+    }
 }
 
 
