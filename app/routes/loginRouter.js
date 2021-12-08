@@ -1,22 +1,37 @@
 module.exports = (application) => {
-    
-    application.get('/login', (req, res) => {
-        application.app.controllers.loginController.form_login(application, req, res)
-    })
-    application.post('/usuario/login', (req, res) => {
-        application.app.controllers.loginController.login_usuario(application, req, res)
-    })
+
+  const passport = require('passport')
+
+  // GET E POST LOGIN
+  application.get('/login', (req, res, next) => {
+    if (req.query.fail) {
+      res.render('usuarios/form_login', { message: 'Usuario e/ou senha inválidos!' });
+    } else {
+      res.render('usuarios/form_login', { message: null })
+    }
+  })
+  application.post('/usuario/login', passport.authenticate('local', {
+    successRedirect: '/',
+    failureRedirect: '/login?fail=true'
+  }));
+  // application.get('/login', (req, res) => {
+  //     application.app.controllers.loginController.form_login(application, req, res)
+  // })
+  // application.post('/usuario/login', (req, res) => {
+  //     application.app.controllers.loginController.login_usuario(application, req, res)
+  // })
 
 
-    application.get('/cadastro', (req, res) => {
-        application.app.controllers.loginController.form_cadastro(application, req, res)
-    })
-    application.post('/usuario/cadastro', (req, res) => {
-        application.app.controllers.loginController.cadastro_usuario(application, req, res)
-    })
+  application.get('/cadastro', (req, res) => {
+    application.app.controllers.loginController.form_cadastro(application, req, res)
+  })
+  application.post('/usuario/cadastro', (req, res) => {
+    application.app.controllers.loginController.cadastro_usuario(application, req, res)
+  })
 
 
-    application.get('/home/usuario', (req, res) => {
-        application.app.controllers.homeController.home_usuario(application, req, res)
-    })
+  application.get('/home/usuario', (req, res) => {
+    application.app.controllers.homeController.home_usuario(application, req, res)
+  })
+
 }

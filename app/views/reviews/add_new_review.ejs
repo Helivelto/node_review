@@ -23,7 +23,7 @@
 
     <header>
 
-        <span class="logo">Reviewr.com</span>
+        <span class="logo"><a href="/">Reviewr.com</a></span>
 
         <nav>
             <input type="checkbox" name="menu_checkbox" id="menu_checkbox">
@@ -72,7 +72,7 @@
             <input type="text" name="tema" id="review_produto" class="input"  minlength="10" maxlength="50">
 
             <label for="autor" class="inputs-label">Autor do Review</label>
-            <input type="text" name="autor" id="review_autor" class="input">
+            <input type="text" name="autor" id="review_autor" class="input" value="<%= nome_usuario %>">
 
             <label for="review" class="inputs-label">Review</label>
             <textarea name="review" id="review" class="input" cols="30" rows="10" minlength="10" maxlength="500"></textarea>

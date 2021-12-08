@@ -104,4 +104,8 @@ main > h3{
     margin-top: 3em;
     color: #fff;
 }
+
+#review_autor{
+    pointer-events: none;
+}
 }

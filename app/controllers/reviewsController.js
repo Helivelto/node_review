@@ -23,7 +23,7 @@ module.exports.review = (application, req, res) => {
 
 
 module.exports.add_new_review = (application, req, res) => {
-    res.render('reviews/add_new_review', {validacao: {}, review: {}})
+    res.render('reviews/add_new_review', {validacao: {}, review: {}, nome_usuario: req.user.nome_usuario})
 }
 
 

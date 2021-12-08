@@ -62,14 +62,14 @@
 
                         <div class="inputs-box_input">
                             <label for="email_usuario" class="inputs-label">Email</label>
-                            <input type="text" name="email_usuario" id="user_email" class="input" 
+                            <input type="text" name="username" id="user_email" class="input" 
                             maxlength="50" minlength="8" required>
                         </div>
 
                         <div class="inputs-box_input">
                             <label for="senha_usuario" class="inputs-label">Senha</label>
-                            <input type="password" name="senha_usuario" id="password-input" 
-                            class="input" maxlength="15" minlength="5" required>
+                            <input type="password" name="password" id="password-input" 
+                            class="input" maxlength="15" minlength="2" required>
                         </div>
 
                         <div class="login_components">
@@ -79,7 +79,11 @@
                         </div>
 
                     </form>
-
+                    <% if(message) { %>
+                        <p>
+                            <label style="color: red;"><%= message %></label>
+                        </p>
+                    <% } %>
                 </div>
 
             </section>

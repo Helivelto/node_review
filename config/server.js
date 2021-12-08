@@ -2,20 +2,35 @@ const express = require('express')
 const consign = require('consign')
 const expressValidator = require('express-validator')
 const bodyParser = require('body-parser')
-const session = require('express-session')
-// const expressValidator = require('express-validator')
 
 // Express
-let app = express()
+let app = express();
 
-// Sessiom
+
+const passport = require('passport');
+const session = require('express-session');
+require('../app/auth')(passport);
+
+// function authenticationMiddleware(req, res, next){
+  
+//   if(req.isAuthenticated()) return next();
+//   res.redirect('/login');
+
+// };
+
+
+
+// Session
 app.set('trust proxy', 1) // trust first proxy
 app.use(session({
-  secret: 'my_secret_keyApp',
+  secret: '123',
   resave: false,
   saveUninitialized: false,
-  cookie: { secure: true }
-}))
+  cookie: {maxAge: 2 * 60 * 1000} // 2min
+}));
+
+app.use(passport.initialize())
+app.use(passport.session())
 
 
 // EJS
@@ -27,6 +42,8 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(expressValidator())
 app.use(express.static('./app/public'))
 
+
+
 // Consign
 consign()
 .include('app/routes')
@@ -34,6 +51,10 @@ consign()
 .then('app/models')
 .then('app/controllers')
 .into(app)
+
+// Router
+// const indexRouter = require('../app/routes/homeRouter')
+// app.use('/', indexRouter)
 
 
 module.exports = app
