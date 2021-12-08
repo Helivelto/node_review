@@ -1,5 +1,7 @@
 module.exports = (application) => {
-    application.get('/reviews', (req, res) => {
+    const authMiddleware = require('../../config/server')
+
+    application.get('/reviews', authMiddleware.authenticationMiddleware, (req, res) => {
         application.app.controllers.reviewsController.reviews(application, req, res);
     })
 
@@ -7,7 +9,7 @@ module.exports = (application) => {
         application.app.controllers.reviewsController.review(application, req, res);
     })
 
-    application.get('/add-new-review', (req, res) => {
+    application.get('/add-new-review', authMiddleware.authenticationMiddleware,(req, res) => {
         application.app.controllers.reviewsController.add_new_review(application, req, res)
     })
 

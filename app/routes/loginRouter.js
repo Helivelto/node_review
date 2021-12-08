@@ -1,5 +1,4 @@
 module.exports = (application) => {
-
   const passport = require('passport')
 
   // GET E POST LOGIN
@@ -30,8 +29,8 @@ module.exports = (application) => {
   })
 
 
-  application.get('/home/usuario', (req, res) => {
-    application.app.controllers.homeController.home_usuario(application, req, res)
-  })
+  // application.get('/home/usuario', (req, res) => {
+  //   application.app.controllers.homeController.home_usuario(application, req, res)
+  // })
 
 }

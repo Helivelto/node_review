@@ -1,10 +1,6 @@
 module.exports = (application) => {
-    application.get('/', function authenticationMiddleware(req, res, next){
-  
-        if(req.isAuthenticated()) return next();
-        res.redirect('/login');
-      
-      }, function(req, res){
-        application.app.controllers.homeController.index(application, req, res);
-    })
+    const authMiddleware = require('../../config/server')
+    application.get('/', authMiddleware.authenticationMiddleware, function(req, res){
+      application.app.controllers.homeController.index(application, req, res);
+  })
 }

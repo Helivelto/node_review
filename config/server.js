@@ -11,12 +11,12 @@ const passport = require('passport');
 const session = require('express-session');
 require('../app/auth')(passport);
 
-// function authenticationMiddleware(req, res, next){
+module.exports.authenticationMiddleware = (req, res, next) => {
   
-//   if(req.isAuthenticated()) return next();
-//   res.redirect('/login');
+  if(req.isAuthenticated()) return next();
+  res.redirect('/login');
 
-// };
+};
 
 
 
@@ -56,5 +56,9 @@ consign()
 // const indexRouter = require('../app/routes/homeRouter')
 // app.use('/', indexRouter)
 
+// Erro 404
+app.use(function(req, res, next) {
+  res.render('error', { url: req.url })
+});
 
 module.exports = app
