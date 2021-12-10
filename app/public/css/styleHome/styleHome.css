@@ -41,6 +41,10 @@ header{
     font-size: 1.7em;
     font-family: 'Pattaya', sans-serif;
 }
+a{
+    color: inherit;
+    text-decoration: none;
+}
 /* --- Menu --- */
 nav{
     display: flex;

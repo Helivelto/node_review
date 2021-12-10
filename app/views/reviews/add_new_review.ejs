@@ -23,7 +23,7 @@
 
     <header>
 
-        <span class="logo"><a href="/">Reviewr.com</a></span>
+        <span class="logotipo"><a href="/">Reviewr.com</a></span>
 
         <nav>
             <input type="checkbox" name="menu_checkbox" id="menu_checkbox">
@@ -33,49 +33,59 @@
                 
                 <div class="menu">
                     <ul class="menu_ul">
-                        <li><a href="/login">Fazer Login</a></li>
-                        <li><a href="add-new-review">Fazer Review</a></li>
-                        <li><a href="reviews">Reviews</a></li>
+                        <div class="user">
+                            <img src="/img/user_icon.svg"/>
+                            <li><a href="/perfil">Perfil</a></li>
+                        </div>
+
+                        <div class="config">
+                            <img src="/img/config_icon.svg"/>
+                            <li><a href="/config">Configurações</a></li>
+                        </div>
+
+                        <div class="logout">
+                            <img src="/img/Vector.svg"/>
+                            <li><a href="/logout">Sair</a></li>
+                        </div>
                     </ul>
                 </div>
         </nav>
 
     </header>
 
-    <% if(validacao.length > 0){ %>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="alert alert-danger">
-                    <strong>Atenção!</strong>
-                    <ul>
-                        <% for(let i = 0; i < validacao.length; i++){ %>
-                            <li><%= validacao[i].msg %></li>
-                        <% } %>
-                        
-                    </ul>
-                </div>
-            </div>
-        </div>
-    <% } %>
-
 
     <main>
 
         <h3>Faça o seu Review</h3>
 
+        <span id="nome_usuario">Autor: <%= usuario.nome_usuario %></span>
+
         <form action='/new/reviews' method="post" class="inputs">
 
+            <% if(validacao.length > 0){ %>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="alert alert-danger">
+                            <strong>Atenção!</strong>
+                            <ul>
+                                <% for(let i = 0; i < validacao.length; i++){ %>
+                                    <li><%= validacao[i].msg %></li>
+                                <% } %>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
+
             <label for="titulo_review" class="inputs-label">Título do Review</label>
-            <input type="text" name="titulo_review" id="review_titulo" class="input" minlength="5" maxlength="30" >
+            <input type="text" name="titulo_review" id="review_titulo" class="input">
 
             <label for="tema" class="inputs-label">Tema do Review</label>
-            <input type="text" name="tema" id="review_produto" class="input"  minlength="10" maxlength="50">
-
-            <label for="autor" class="inputs-label">Autor do Review</label>
-            <input type="text" name="autor" id="review_autor" class="input" value="<%= nome_usuario %>">
+            <input type="text" name="tema" id="review_produto" class="input">
 
             <label for="review" class="inputs-label">Review</label>
-            <textarea name="review" id="review" class="input" cols="30" rows="10" minlength="10" maxlength="500"></textarea>
+            <textarea name="review" id="review" class="input" cols="30" rows="10"></textarea>
 
             <input type="submit" id="postar_review" value="Postar Review">
 

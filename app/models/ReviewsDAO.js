@@ -12,8 +12,9 @@ ReviewsDAO.prototype.getReview = function(id, callback){
     DbConnection.connection().query(`select * from reviews where id = ${id.id}`, callback)
 }
 
-ReviewsDAO.prototype.salvarReview = function (review, callback){
-    DbConnection.connection().query(`insert into reviews set ?`, review, callback)
+ReviewsDAO.prototype.salvarReview = function (review, usuario, callback){
+    // DbConnection.connection().query('insert into reviews set ?', review, callback)
+    DbConnection.connection().query(`insert into reviews(autor, review, tema, titulo_review) values ('${usuario.nome_usuario}', '${review.review}', '${review.tema}', '${review.titulo_review}')`, callback)
 }
 
 ReviewsDAO.prototype.getUltimas = function(review, callback){

@@ -23,12 +23,16 @@ module.exports.review = (application, req, res) => {
 
 
 module.exports.add_new_review = (application, req, res) => {
-    res.render('reviews/add_new_review', {validacao: {}, review: {}, nome_usuario: req.user.nome_usuario})
+    res.render('reviews/add_new_review', {validacao: {}, review: {}, usuario: req.user}) //nome_usuario: req.user.nome_usuario
+    console.log(req.user.nome_usuario)
 }
 
 
 module.exports.new_review = (application, req, res) => {
     var review = req.body;
+    // console.log(review)
+    const usuario = req.user
+    // console.log(usuario.nome_usuario)
 
     // Validando dados
     req.assert('titulo_review', 'O titulo do review precisa ter entre 5 e 30 caracteres').len(5, 30)
@@ -39,14 +43,14 @@ module.exports.new_review = (application, req, res) => {
     const erros = req.validationErrors()
 
     if(erros){
-        res.render('reviews/add_new_review', { validacao: erros, review: review })
-        // console.log(erros)
+        res.render('reviews/add_new_review', { validacao: erros, review: review, usuario: usuario })
+        console.log(erros)
         return;
     }
 
     const connection = application.config.dbConnection;
     const reviewsDao = new application.app.models.ReviewsDAO(connection)
-    reviewsDao.salvarReview(review, (error, result) => {
-        res.redirect('/home/usuario')
+    reviewsDao.salvarReview(review, usuario, (error, result) => {
+        res.redirect('/')
     })
 }
