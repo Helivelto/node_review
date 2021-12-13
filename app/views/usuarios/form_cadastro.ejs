@@ -59,7 +59,7 @@
                     <img src="img/userpng.png" alt="Imagem generica de usuario">
                 </div>
 
-                <form action="/usuario/cadastro" method="post" id="main_form">
+                <form action="/usuario/cadastro" enctype="multipart/form-data" method="post" id="main_form">
 
                     <div class="inputs">
                         <span class="login_text">Login</span>
@@ -68,20 +68,22 @@
                         <div class="inputs-box_input">
                             <label for="nome_usuario" class="inputs-label">Nome de usuario</label>
                             <input type="text" name="nome_usuario" id="nome_usuario" class="input" 
-                            required maxlength="50" minlength="8">
+                            required >
                         </div>
 
                         <div class="inputs-box_input">
                             <label for="email_usuario" class="inputs-label">Email</label>
                             <input type="email" name="email_usuario" id="user_email" class="input" 
-                            maxlength="50" minlength="8" required>
+                            required>
                         </div>
                         
                         <div class="inputs-box_input">
                             <label for="senha_usuario" class="inputs-label">Senha</label>
                             <input type="password" name="senha_usuario" id="password-input" 
-                            class="input" maxlength="15" minlength="1" required>
+                            class="input"  required>
                         </div>
+
+                        <input type="file" name="file" id="">
 
                         <!-- <div class="inputs-box_input">
                             <label for="senha_usuario" class="inputs-label">Confirme sua Senha</label>

@@ -59,8 +59,15 @@
     <span>Seus reviews:</span>
 
     <div id="box_main">
+        <% if(usuario.foto_usuario == null) {%>
+            <img src="/img/userpng.png" alt="">
+        <% } %>
+            <img src="../../../uploads/<%= usuario.foto_usuario %>" alt="">
 
         <% for(let i=0; i < reviews.length; i++){%>
+            <div class="box_user">
+
+            </div>
             <div class="box_review">
                 <a href="review?id=<%=reviews[i].id%>">
                     <%= reviews[i].titulo_review %>
@@ -72,6 +79,7 @@
             <br>
             <% } %>
 
+            
     </div>
 
 </div>
