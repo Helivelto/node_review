@@ -21,6 +21,11 @@ ReviewsDAO.prototype.getUltimas = function(review, callback){
     DbConnection.connection().query('select * from reviews order by id desc', review, callback)
 }
 
+ReviewsDAO.prototype.getReviewUser = function(usuario, callback){
+    DbConnection.connection().query(`select usuarios.*, reviews.* from reviews inner join usuarios on 
+    (reviews.autor = usuarios.nome_usuario) where usuarios.nome_usuario = '${usuario.nome_usuario}' `, callback)
+}
+
 module.exports = () => {
     return ReviewsDAO;    
 }
