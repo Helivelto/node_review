@@ -1,0 +1,60 @@
+#box_user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+#box_user > img{
+    width: 25%;
+    margin-bottom: 1em;
+}
+
+main span{
+    color: #2F3542;
+}
+main .msg_no-review{
+    font-family: 'Roboto', monospace;
+    color: #2f3542;
+    font-size: 1.3rem;
+}
+#box_main > span:first-child{
+    font-family: 'Roboto Mono', monospace;
+    color: #2f3542;
+    font-size: 1.6rem;
+
+    margin-bottom: 1em;
+}
+#box_main{
+    margin-left: 5vw;
+}
+#box_main div{
+    width: 90vw;
+    min-height: 5em;
+
+    border-radius: 8px;
+
+    padding: 1em;
+
+    background-color: #f1f2f6;
+    display: flex;
+    flex-direction: column;
+}
+#box_main div:nth-child(2){
+    margin-top: 2em;
+}
+#box_main div:nth-child(3){
+    margin-top: 1em;
+}
+#box_main a, #span_produto{
+    font-family: 'Roboto Mono', monospace;
+    color: #2f3542;
+    font-size: 1.6rem;
+    font-weight: bold;
+
+    margin-bottom: 0.5em;
+}
+#span_produto{
+    margin-bottom: 0;
+    font-size: 1.3rem;
+    font-weight: initial;
+}

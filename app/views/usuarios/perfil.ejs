@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-        <!-- css -->
+    <!-- css -->
     <!-- css -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styleHome/styleHome.css">
+    <link rel="stylesheet" href="css/styleHome/stylePerfil.css">
     <link rel="stylesheet" href="css/styleReview/styleReview.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,17 +19,18 @@
     <!-- Roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<div id="container">
+    <div id="container">
 
-    <header>
+        <header>
 
-        <span class="logotipo"><a href="/">Reviewr.com</a></span>
-        <!-- <img src="/img/r_ofc.png" alt=""> -->
+            <span class="logotipo"><a href="/">Reviewr.com</a></span>
+            <!-- <img src="/img/r_ofc.png" alt=""> -->
 
-        <nav>
-            <input type="checkbox" name="menu_checkbox" id="menu_checkbox">
+            <nav>
+                <input type="checkbox" name="menu_checkbox" id="menu_checkbox">
                 <div class="menu_bar" id="bar1"></div>
                 <div class="menu_bar" id="bar2"></div>
                 <div class="menu_bar" id="bar3"></div>
@@ -37,52 +40,68 @@
                 <div class="menu">
                     <ul class="menu_ul">
                         <div class="user">
-                            <img src="img/user_icon.svg"/>
+                            <img src="img/user_icon.svg" />
                             <li><a href="/perfil">Perfil</a></li>
                         </div>
 
                         <div class="config">
-                            <img src="img/config_icon.svg"/>
+                            <img src="img/config_icon.svg" />
                             <li><a href="/config">Configurações</a></li>
                         </div>
 
                         <div class="logout">
-                            <img src="img/Vector.svg"/>
+                            <img src="img/Vector.svg" />
                             <li><a href="/logout">Sair</a></li>
                         </div>
                     </ul>
                 </div>
-        </nav>
+            </nav>
 
-    </header>
+        </header>
+
+        <main>
+
+            <div id="box_user">
+                <% if(usuario.foto_usuario==null) {%>
+                    <img src="/img/userpng.png" alt="">
+                    <% } %>
+                        <img src="../../../uploads/<%= usuario.foto_usuario %>" alt="">
+                        <span>@<%= usuario.nome_usuario %></span>
+            </div>
     
-    <span>Seus reviews:</span>
+            <div id="box_main">
 
-    <div id="box_main">
-        <% if(usuario.foto_usuario == null) {%>
-            <img src="/img/userpng.png" alt="">
-        <% } %>
-            <img src="../../../uploads/<%= usuario.foto_usuario %>" alt="">
+                <span>Seus reviews:</span>
 
-        <% for(let i=0; i < reviews.length; i++){%>
-            <div class="box_user">
+                <% if(reviews.length == 0) { %>
+                    <br> <br>
+                    <span class="msg_no-review">Você ainda não tem reviews</span>
+                <% } %>
 
+                <% for(let i=0; i < reviews.length; i++){%>
+
+                    <div class="box_review-perfil">
+                        <a href="review?id=<%=reviews[i].id%>">
+                            <%= reviews[i].titulo_review %>
+                        </a>
+                        <span id="span_produto">
+                            <%= reviews[i].tema %>
+                        </span>
+                    </div>
+        
+                <% } %>
+    
+    
             </div>
-            <div class="box_review">
-                <a href="review?id=<%=reviews[i].id%>">
-                    <%= reviews[i].titulo_review %>
-                </a>
-                <span id="span_produto">
-                    <%= reviews[i].tema %>
-                </span>
-            </div>
-            <br>
-            <% } %>
 
-            
+        </main>
+
+        <footer>
+            <div id="create_post"><a href="/add-new-review">Criar Review</a></div>
+        </footer>
+
     </div>
 
-</div>
-
 </body>
+
 </html>

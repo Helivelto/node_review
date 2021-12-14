@@ -1,13 +1,44 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error</title>
+    <title>Document</title>
+    <!-- css -->
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styleHome/styleHome.css">
+    <link rel="stylesheet" href="css/styleHome/styleError.css">
+    <link rel="stylesheet" href="css/styleHome/stylePerfil.css">
+    <link rel="stylesheet" href="css/styleReview/styleReview.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Pattaya -->
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+    <!-- Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h1>404</h1>
-    <span>Página <%= url%> não encontrada!</span>
+
+    <div id="container">
+
+        <header>
+
+            <span class="logotipo-error">Reviewr.com</span>
+
+        </header>
+
+        <main>
+            <div class="msg_main">
+                <h1>404</h1>
+                <span>Não existe a página reviewr.com<%= url%></span>
+                <a href="/">Voltar</a>
+            </div>
+        </main>
+
+    </div>
 </body>
 </html>
