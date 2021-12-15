@@ -187,6 +187,34 @@ section{
     .outra_opcao-btn{
         margin-top: 1em;
     }
+
+
+    #pt2-cad{
+        display: none;
+    }
+    #pt2-cad span:nth-child(2){
+        margin-top: 2.3vh;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        font-weight: 900;
+        color: #636e72;
+        display: flex;
+        justify-content: center;
+    }
+    #foto-perfil{
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        font-weight: bolder;
+        border: none;
+        width: 75vw;
+        height: 4.5vh;
+        background-color: #30b869;
+        border-radius: 10px;
+        outline: none;
+        margin-top: 2.5em;
+        color: #fff;
+    }
+
 }
 
 

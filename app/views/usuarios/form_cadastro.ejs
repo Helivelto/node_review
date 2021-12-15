@@ -62,41 +62,52 @@
                 <form action="/usuario/cadastro" enctype="multipart/form-data" method="post" id="main_form">
 
                     <div class="inputs">
-                        <span class="login_text">Login</span>
+                        <div id="pt1-cad">
+                            <span class="login_text">Login</span>
 
 
-                        <div class="inputs-box_input">
-                            <label for="nome_usuario" class="inputs-label">Nome de usuario</label>
-                            <input type="text" name="nome_usuario" id="nome_usuario" class="input" 
-                            required >
+                            <div class="inputs-box_input">
+                                <label for="nome_usuario" class="inputs-label">Nome de usuario</label>
+                                <input type="text" name="nome_usuario" id="nome_usuario" class="input" 
+                                required >
+                            </div>
+    
+                            <div class="inputs-box_input">
+                                <label for="email_usuario" class="inputs-label">Email</label>
+                                <input type="email" name="email_usuario" id="user_email" class="input" 
+                                required>
+                            </div>
+                            
+                            <div class="inputs-box_input">
+                                <label for="senha_usuario" class="inputs-label">Senha</label>
+                                <input type="password" name="senha_usuario" id="password-input" 
+                                class="input"  required>
+                            </div>
+    
+    
+                            <div class="inputs-box_input">
+                                <label for="senha_usuario" class="inputs-label">Confirme sua Senha</label>
+                                <input type="password" name="senha_usuario_confirm" id="confirm_password" class="input" 
+                                required>
+                            </div>
+
+                            
+
+                            <div class="login_components">
+                                <div class="cadastro-btn" id="avancar">Avançar</div>
+                                <span class="cadastro-span">Se você já possui uma conta</span>
+                                <button class="outra_opcao-btn"> <a href="/login">Fazer Login</a> </button>
+                            </div>
                         </div>
 
-                        <div class="inputs-box_input">
-                            <label for="email_usuario" class="inputs-label">Email</label>
-                            <input type="email" name="email_usuario" id="user_email" class="input" 
-                            required>
+                        <div id="pt2-cad">
+                            <span class="login_text">Personalizar perfil</span>
+
+                            <span>Você pode escolher uma foto para o seu perfil.</span>
+                            <input type="file" name="file" id="foto-perfil">
+
+                            <button type="submit" class="cadastro-btn" id="cad-btn">Cadastre-se</button>
                         </div>
-                        
-                        <div class="inputs-box_input">
-                            <label for="senha_usuario" class="inputs-label">Senha</label>
-                            <input type="password" name="senha_usuario" id="password-input" 
-                            class="input"  required>
-                        </div>
-
-                        <input type="file" name="file" id="">
-
-                        <!-- <div class="inputs-box_input">
-                            <label for="senha_usuario" class="inputs-label">Confirme sua Senha</label>
-                            <input type="password" name="senha_usuario_confirm" id="confirm_password" class="input" 
-                            required>
-                        </div> -->
-
-                        <div class="login_components">
-                            <button type="submit" class="cadastro-btn">Cadastre-se</button>
-                            <span class="cadastro-span">Se você já possui uma conta</span>
-                            <button class="outra_opcao-btn"> <a href="/login">Fazer Login</a> </button>
-                        </div>
-
                     </div>
                 </form>
 
@@ -108,7 +119,7 @@
     </div>
 
 
-    <script src="js/script_cadastro.js"></script>
+    <script src="js/scriptForms/scriptCad.js"></script>
 </body>
 
 </html>
