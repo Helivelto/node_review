@@ -71,7 +71,7 @@ section{
 .inputs-box_input{
     margin-top: 2em;
 }
-.input:focus, .input:valid{
+.inputValid:valid{
     border-color: #10ac84;
 }
 .border_red{
@@ -188,7 +188,9 @@ section{
         margin-top: 1em;
     }
 
-
+    #pt1-cad{
+        margin-bottom: 2em;
+    }
     #pt2-cad{
         display: none;
     }
@@ -200,6 +202,23 @@ section{
         color: #636e72;
         display: flex;
         justify-content: center;
+    }
+    #avancar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        font-weight: bolder;
+        border: none;
+        width: 75vw;
+        height: 4.5vh;
+        background-color: #30b869;
+        border-radius: 10px;
+        outline: none;
+        margin-top: 2.5em;
+        color: #fff;
     }
     #foto-perfil{
         font-family: 'Roboto', sans-serif;
