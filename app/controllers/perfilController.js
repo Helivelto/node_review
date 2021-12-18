@@ -8,3 +8,25 @@ module.exports.perfil = (application, req, res) => {
         console.log(result)
     })
 }
+
+module.exports.anyperfil = (application, req, res) => {
+    // const User = require('../models/User')
+
+    // const usuario = User.findUsers()
+
+    const autor = req.query
+    console.log(autor)
+    const connection = application.config.dbConnection;
+    const usuariosDao = new application.app.models.UsuariosDAO(connection)
+
+    usuariosDao.getUser(autor, (error, result) => {
+        res.render('usuarios/anyProfile', { anyUser: result })
+        console.log(result)
+    })
+
+
+    // reviewsDao.getReviewUser(usuario, (error, result) => {
+    //     res.render('usuarios/anyProfile', { reviews: result, anyUser: usuario })
+    //     console.log(result)
+    // })
+}

@@ -73,7 +73,7 @@
                 
                 <% for(let i = 0; i < reviews.length; i++){%>
                 <div class="box_review">
-                    <span id="span_autor"><%= reviews[i].autor %></span>
+                    <a href="/anyperfil"><span id="span_autor"><%= reviews[i].autor %></span></a>
                     <a href="review?id=<%=reviews[i].id%>"><%= reviews[i].titulo_review %></a> 
                     <span id="span_produto"><%= reviews[i].tema %></span>
                 </div>
