@@ -13,10 +13,10 @@ UsersDAO.prototype.getUser = function(autor, callback){
     // DbConnection.connection().query(`select * from usuarios where 
     // nome_usuario = '${nome_usuario.nome_usuario}'`, callback)
     // DbConnection.connection().query(`select * from reviews where 
-    // autor = '${autor.autor}'`, callback)
+    // autor = '${autor}'`, callback)
 
     DbConnection.connection().query(`select reviews.*, usuarios.* from reviews inner join usuarios on 
-    (usuarios.nome_usuario = reviews.autor) where reviews.autor = '${autor.nome_usuario}' `, callback)
+    (usuarios.nome_usuario = reviews.autor) where reviews.autor = '${autor.autor}' `, callback)
 }
 
 // UsersDAO.prototype.cadastro = function(obj_usuario, callback){

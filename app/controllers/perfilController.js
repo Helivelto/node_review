@@ -20,7 +20,7 @@ module.exports.anyperfil = (application, req, res) => {
     const usuariosDao = new application.app.models.UsuariosDAO(connection)
 
     usuariosDao.getUser(autor, (error, result) => {
-        res.render('usuarios/anyProfile', { anyUser: result })
+        res.render('usuarios/anyProfile', { userProfile: result })
         console.log(result)
     })
 
