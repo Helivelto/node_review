@@ -233,6 +233,14 @@ section{
         margin-top: 2.5em;
         color: #fff;
     }
+    ::-webkit-file-upload-button{
+        background-color: white;
+        height: 100%;
+        outline: none;
+        border-radius: 10px 0 0 10px;
+        border: none;
+        color: #636e72;
+    }
 
 }
 

@@ -67,7 +67,7 @@
         <main>
 
             <div id="box_user">
-                <% if(usuario.foto_usuario==null) {%>
+                <% if(usuario.foto_usuario==null || usuario.foto_usuario == 'null') {%>
                     <img src="/img/userpng.png" alt="">
                     <% } %>
                         <img src="../../../uploads/<%= usuario.foto_usuario %>" alt="">
