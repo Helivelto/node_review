@@ -21,7 +21,7 @@ body{
     animation: fade_icon 1s ease-out forwards;
 }
 .inicio_login > img{
-    min-width: 23vw;
+    min-width: 20vw;
     max-width: 24vw;
 }
 .login_text{
@@ -47,7 +47,7 @@ section{
     align-items: center;
     align-self: center;
     flex-direction: column;
-    margin-top: 2vh;
+    margin-top: 1em;
     opacity: 1;
     animation: fade_inputs 1s ease-out forwards;
     transition-duration: 1s;
@@ -95,8 +95,6 @@ section{
     font-weight: bolder;
     border: none;
     width: 75vw;
-    height: 4.5vh;
-    height: 2em;
     background-color: #30b869;
     border-radius: 10px;
     outline: none;
@@ -145,6 +143,12 @@ section{
 .inputs a::before{
     left: auto;
     right: 10px;
+}
+.error-msg{
+    font-size: 1.9rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    color: #e74c3c;
 }
 
 
@@ -254,22 +258,19 @@ section{
 /* ESTILO DA PÁGGINA INICIAL */
 
 /* ESTILO DOS INPUTS */
-    .inputs{
-        margin-top: 7vh;
-    }
+
     .input{
         width: 75vw;
         height: 3em;
         background-color: transparent;
         border-radius: 10px;
-        border: solid 1px #fff;
+        border: solid 3px #636e72;
         outline: none;
-        color: #fff;
+        color: #636e72;
         font-size: 1rem;
         margin-top: .5em;
     }
 
-/* ESTILO DOS COMPONENTES DO BOTÃO LOGIN/CADASTRO */
     .inputs a{
         font-size: 1.5rem;
     }
@@ -278,10 +279,11 @@ section{
         width: 45vw;
     }
     .cadastro-span{
-        font-size: 1.3rem;
+        font-size: 1.5rem;
+        color: #636e72;
     }
     .inputs-label{
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     .login_text{
         font-size: 2.7rem;
@@ -289,6 +291,7 @@ section{
     .cadastro-btn{
         font-size: 1.7rem;
         margin-top: 2.5em;
+        height: 4.5vh;
     }
 }
 
@@ -312,6 +315,7 @@ section{
         background-color: gray;
     }
 }
+
 
 
 /* CSS ANIMATIONS E TRANSFORMS */
