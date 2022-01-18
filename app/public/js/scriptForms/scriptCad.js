@@ -51,3 +51,10 @@ go_btn.addEventListener('click', function(e){
         pt2.style.display = 'block'
     }
 })
+
+
+
+// go_btn.addEventListener('click', function(){
+//     pt1.style.display = 'none'
+//     pt2.style.display = 'block'
+// })
