@@ -29,37 +29,57 @@
             <span class="logotipo"><a href="/">Reviewr.com</a></span>
             <!-- <img src="/img/r_ofc.png" alt=""> -->
 
-            <nav>
+            <nav id="menu_hamburguer">
                 <input type="checkbox" name="menu_checkbox" id="menu_checkbox">
-                <div class="menu_bar" id="bar1"></div>
-                <div class="menu_bar" id="bar2"></div>
-                <div class="menu_bar" id="bar3"></div>
+                    <div class="menu_bar" id="bar1"></div>
+                    <div class="menu_bar" id="bar2"></div>
+                    <div class="menu_bar" id="bar3"></div>
 
-                <div id="modal_box"></div>
+                    <div id="modal_box"></div>
 
-                <div class="menu">
-                    <ul class="menu_ul">
-                        <div class="user">
-                            <img src="img/user_icon.svg" />
-                            <li><a href="/perfil">Perfil</a></li>
-                        </div>
+                    <div class="menu">
+                        <ul class="menu_ul">
+                            <div class="user">
+                                <img src="img/user_icon.svg"/>
+                                <li><a href="/perfil">Perfil</a></li>
+                            </div>
 
-                        <div class="config">
-                            <img src="img/config_icon.svg" />
-                            <li><a href="/config">Configurações</a></li>
-                        </div>
+                            <div class="config">
+                                <img src="img/config_icon.svg"/>
+                                <li><a href="/config">Configurações</a></li>
+                            </div>
 
-                        <div class="home">
-                            <img src="img/home_icon.svg" />
-                            <li><a href="/">Voltar ao inicio</a></li>
-                        </div>
+                            <!-- <div class="home">
+                                <img src="img/home_icon.svg" />
+                                <li><a href="/">Voltar ao inicio</a></li>
+                            </div> -->
 
-                        <div class="logout">
-                            <img src="img/Vector.svg" />
-                            <li><a href="/logout">Sair</a></li>
-                        </div>
-                    </ul>
-                </div>
+                            <div class="logout">
+                                <img src="img/Vector.svg"/>
+                                <li><a href="/logout">Sair</a></li>
+                            </div>
+                        </ul>
+                    </div>
+            </nav>
+
+            <nav id="menu_vertical">
+                <ul class="menu_ul_vertical">
+                    <div class="user-vtc">
+                        <li><a href="/perfil">Perfil</a></li>
+                    </div>
+
+                    <div class="config-vtc">
+                        <li><a href="/config">Configurações</a></li>
+                    </div>
+
+                    <!-- <div class="home">
+                        <li><a href="/">Inicio</a></li>
+                    </div> -->
+
+                    <div class="logout-vtc">
+                        <li><a href="/logout">Sair</a></li>
+                    </div>
+                </ul>
             </nav>
 
         </header>

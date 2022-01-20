@@ -20,7 +20,6 @@ main .msg_no-review{
 #box_main > span:first-child{
     font-family: 'Roboto Mono', monospace;
     color: #2f3542;
-    font-size: 1.6rem;
 
     margin-bottom: 1em;
 }
@@ -57,4 +56,32 @@ main .msg_no-review{
     margin-bottom: 0;
     font-size: 1.3rem;
     font-weight: initial;
+}
+
+@media only screen and (max-width: 480px){
+    #box_main > span:first-child{
+        font-family: 'Roboto Mono', monospace;
+        color: #2f3542;
+        font-size: 1.6rem;
+
+        margin-bottom: 1em;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 839px){
+    /* #menu_vertical{
+        width: 80%;
+        justify-content: end;
+    } */
+    /* .menu_ul_vertical{
+        width: 90%;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        
+    } */
+    #box_user span{
+        font-size: 1.7rem;
+    }
+    #box_main > span{
+        font-size: 2.3rem;
+    }
 }
