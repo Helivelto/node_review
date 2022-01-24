@@ -11,14 +11,14 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styleHome/styleHome.css">
     <link rel="stylesheet" href="css/styleHome/styleError.css">
-    <link rel="stylesheet" href="css/styleHome/stylePerfil.css">
-    <link rel="stylesheet" href="css/styleReview/styleReview.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <!-- Pattaya -->
     <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
     <!-- Roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="img/R.svg" type="image/x-icon">
 </head>
 
 <body>
@@ -27,18 +27,26 @@
 
         <header>
 
-            <span class="logotipo-error">Reviewr.com</span>
+            <span class="logotipo"><a href="/">Reviewr.com</a></span>
 
         </header>
 
         <main>
-            <div class="msg_main">
-                <h1>404</h1>
-                <span>Não existe a página reviewr.com<%= url%></span>
-                <a href="/">Voltar</a>
+            <section>
+                <h3>Crie Reviews sobre qualquer coisa.</h3>
+                <img src="img/cartoon_celular.png" alt="" class="img_lead">
+            </section>
+
+            <div id="main_error">
+                <div class="msg_main">
+                    <h1>404</h1>
+                    <span>Não existe a página reviewr.com<%= url%></span>
+                    <a href="/">Voltar</a>
+                </div>
             </div>
         </main>
 
     </div>
 </body>
+
 </html>

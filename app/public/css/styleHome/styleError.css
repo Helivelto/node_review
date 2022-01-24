@@ -1,3 +1,7 @@
+body{
+    background-color: #f1f2f6;
+}
+
 header{
     height: 13vh;
     width: 100vw;
@@ -28,10 +32,40 @@ a{
 .msg_main{
     display: flex;
     flex-direction: column;
-
-    margin: 4em 1em 0em 2em;
 }
 .msg_main h1:first-child{
     font-size: 3.5rem;
     color: #2f3542;
+}
+
+@media screen and (max-width: 480px) {
+    
+}
+
+@media screen and (min-width: 481px) and (max-width: 839px) {
+    #main_error{
+        padding-top: 3em;
+        display: flex;
+        justify-content: center;
+    }
+    .msg_main {
+        width: 90%;
+        justify-self: center;
+        background-color: #DB918E;
+        color: #f1f2f6;
+        padding: 2em 1em 2em 1em;
+    }
+
+    .msg_main h1:first-child{
+        font-size: 7rem;
+        color: #f1f2f6;
+    }
+    .msg_main span:nth-child(2){
+        font-size: 2rem;
+        margin: 1em 0 1em 0;
+    }
+    .msg_main a:nth-child(3){
+        font-size: 2.2rem;
+        text-decoration: underline;
+    }
 }

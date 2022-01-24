@@ -26,18 +26,7 @@ main .msg_no-review{
 #box_main{
     margin-left: 5vw;
 }
-#box_main div{
-    width: 90vw;
-    min-height: 5em;
 
-    border-radius: 8px;
-
-    padding: 1em;
-
-    background-color: #f1f2f6;
-    display: flex;
-    flex-direction: column;
-}
 #box_main div:nth-child(2){
     margin-top: 2em;
 }
@@ -66,22 +55,58 @@ main .msg_no-review{
 
         margin-bottom: 1em;
     }
+    #box_main div{
+        width: 90vw;
+        min-height: 5em;
+    
+        border-radius: 8px;
+    
+        padding: 1em;
+    
+        background-color: #f1f2f6;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 839px){
-    /* #menu_vertical{
-        width: 80%;
-        justify-content: end;
-    } */
-    /* .menu_ul_vertical{
-        width: 90%;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        
-    } */
     #box_user span{
         font-size: 1.7rem;
     }
+    #box_user img{
+        margin-top: 1em;
+        width: 20%;
+    }
     #box_main > span{
         font-size: 2.3rem;
+    }
+
+    .box_review-perfil{
+        width: 90vw;
+        min-height: 8em;
+    
+        border-radius: 8px;
+    
+        padding: 1em;
+    
+        background-color: #f1f2f6;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #box_main a, #span_produto{
+        font-family: 'Roboto Mono', monospace;
+        color: #2f3542;
+        font-size: 1.7rem;
+        font-weight: bold;
+    }
+    #box_main a {
+        display: flex;
+        width: 100%;
+        align-self: end;
+    }
+    #span_produto{
+        margin-top: .5em;
+        font-size: 1.5rem;
     }
 }

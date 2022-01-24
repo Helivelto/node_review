@@ -5,30 +5,59 @@
     background-color: #F1F2F6;
 } */
 
+.logo a{
+    color: white;
+    text-decoration: none;
+}     
+.review_box a{
+    color: #2f3542;
+    text-decoration: none;
+    font-size: 1.5rem;
+    /* font-weight: bolder; */
+
+    margin-top: auto;
+    margin-bottom: auto;
+
+    justify-self: center;
+}
+
+.header-review{
+    background-color: brown;
+    height: 10vh;
+    padding: 0;
+}
+
+#oneReview{
+    width: 100vw;
+    height: 90vh;
+
+    padding: 2em;
+    margin: 0;
+
+    background-color: #f1f2f6;
+    display: flex;
+    flex-direction: column;
+}
+
+#back_box{
+    width: 100vw;
+    height: 100%;
+
+    background-color: #30b869;
+    color: #F1F2F6;
+
+    display: flex;
+    align-items: center;
+}
+#back_box img{
+    width: 30px;
+
+    margin-left: calc(5vw + 1em);
+    margin-right: 2em;
+}
+
 /* Mobile */
 @media only screen and (max-width: 480px){
-    .logo a{
-        color: white;
-        text-decoration: none;
-    }     
-    .review_box a{
-        color: #2f3542;
-        text-decoration: none;
-        font-size: 1.5rem;
-        /* font-weight: bolder; */
-
-        margin-top: auto;
-        margin-bottom: auto;
-
-        justify-self: center;
-    }
-
-    .header-review{
-        background-color: brown;
-        height: 10vh;
-        padding: 0;
-    }
-
     .review_box span:nth-child(1){
         margin-top: 1em;
 
@@ -54,35 +83,6 @@
         color: #000;
         font-family: 'Roboto', sans-serif;
     }
-
-    #oneReview{
-        width: 100vw;
-        height: 90vh;
-    
-        padding: 2em;
-        margin: 0;
-    
-        background-color: #f1f2f6;
-        display: flex;
-        flex-direction: column;
-    }
-
-    #back_box{
-        width: 100vw;
-        height: 100%;
-
-        background-color: #30b869;
-        color: #F1F2F6;
-
-        display: flex;
-        align-items: center;
-    }
-    #back_box img{
-        width: 30px;
-
-        margin-left: calc(5vw + 1em);
-        margin-right: 2em;
-    }
     #back_box h3{
         font-size: 1.4rem;
         font-family: 'Roboto Mono', sans-serif;;
@@ -91,7 +91,36 @@
 
 /* Tablet */
 @media only screen and (min-width: 481px) and (max-width: 839px){
+    .review_box span:nth-child(1){
+        margin-top: 1em;
 
+        font-size: 1.5rem;
+        color: #2f3542;
+    } 
+    .review_box span:nth-child(2){
+        margin-top: 1em;
+
+        font-size: 2rem;
+        font-weight: bolder;
+    }  
+    .review_box span:nth-child(3){
+        font-size: 1.5rem;
+
+        color: #2f3542;
+        margin-top: .7em;
+    }
+    .review_box p{
+        margin-top: 1.5em;
+        
+        font-size: 1.7rem;
+        color: #000;
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.3em;
+    }
+    #back_box h3{
+        font-size: 1.7rem;
+        font-family: 'Roboto Mono', sans-serif;;
+    }
 }
 
 /* Desktop */
