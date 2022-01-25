@@ -6,8 +6,9 @@ body{
     height: 100vh;
 }
 :root{
-    --mainFontSize: 1.7rem;
-    --btnFontSize: 2rem
+    --main-tablet-font-size: 1.7rem;
+    --btn-tablet-font-size: 2rem;
+    --main-input-font-size: 1.5rem;
 }
 
 
@@ -22,12 +23,9 @@ body{
     align-items: center;
     justify-items: center;
     width: 100%;
+    height: 20vh;
     transition: transform 1s;
     animation: fade_icon 1s ease-out forwards;
-}
-.inicio_login > img{
-    min-width: 20vw;
-    max-width: 23vw;
 }
 .login_text{
     margin-top: 1.2em;
@@ -133,10 +131,11 @@ section{
     margin-top: 1.5vh;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
-    color: #f5f6fa;
+    color: #636e72;
     display: flex;
     justify-content: center;
 }
+
 .inputs a{
     color: #fff;
     display: flex;
@@ -149,7 +148,6 @@ section{
     right: 10px;
 }
 .error-msg{
-    font-size: 1.9rem;
     font-family: 'Roboto', sans-serif;
     font-weight: bolder;
     color: #e74c3c;
@@ -217,6 +215,10 @@ section{
     #container{
         height: 100vh;
     }
+    .inicio_login > img{
+        min-width: 20vw;
+        max-width: 50vw;
+    }
 
     /* ESTILO DOS INPUTS */
     .inputs{
@@ -245,8 +247,18 @@ section{
         margin-top: 2.5em;
         color: #fff;
     }
+
+    .login-btn, #avancar, .outra_opcao-btn{
+        margin-top: 2em;
+        height: 2em;
+        font-size: 1.2rem;
+    }
     .outra_opcao-btn{
         margin-top: 1em;
+    }
+
+    .error-msg{
+        font-size: 1.2rem;
     }
     
 }
@@ -259,8 +271,8 @@ section{
         height: 100vh;
     }
 
-    form{
-        margin-top: 5vh;
+    .inicio_login > img{
+        min-width: 20vw;
     }
 
     /* ESTILO DOS INPUTS */
@@ -273,34 +285,30 @@ section{
 
         outline: none;
         color: #636e72;
-        font-size: 1.5rem;
+        font-size: var(--main-input-font-size);
         margin-top: .5em;
     }
 
     .inputs a, #avancar{
-        font-size: var(--btnFontSize);
+        font-size: var(--btn-tablet-font-size);
     }
 
-    .cadastro-span{
-        font-size: 1.5rem;
-        color: #636e72;
-    }
     .inputs-label{
-        font-size: 1.5rem;
+        font-size: var(--main-input-font-size);
     }
     .login_text{
         font-size: 2.7rem;
     }
 
     .login_components span{
-        font-size: var(--mainFontSize);
+        font-size: var(--main-tablet-font-size);
         margin-top: 1em;
     }
 
     /* ESTILOS DA PT2. DO CADASTRO */
     #pt2-cad span:nth-child(2){
         justify-content: start;
-        font-size: var(--mainFontSize);
+        font-size: var(--main-tablet-font-size);
         margin-top: 2em;
     }
     #pt2-cad span:nth-child(1){
@@ -309,7 +317,7 @@ section{
         margin-top: 2em;
     }
     #foto-perfil, .login-btn, .cadastro-btn{
-        font-size: var(--btnFontSize);
+        font-size: var(--btn-tablet-font-size);
         margin-top: 1em;
         height: 4.5vh;
     }
@@ -319,6 +327,10 @@ section{
     .inputs{
         display: flex;
         align-self: center;
+    }
+
+    .error-msg{
+        font-size: 1.9rem;
     }
 }
 
