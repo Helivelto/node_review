@@ -38,6 +38,9 @@ body{
     color: #636e72;
     align-self: flex-start;
 }
+.inicio_login > h3{
+    display: none;
+}
 section{
     height: 100vh;
 }
@@ -226,6 +229,12 @@ section{
     /* ESTILO DOS INPUTS */
     .inputs{
         margin-top: 4vh;
+
+        /* TESTE */
+        border: 3px solid #f5f6fa;
+        border-radius: 10px;
+        background-color: #f1f2f6;
+        padding: 1em;
     }
 
     /* ESTILO DOS COMPONENTES DO BOTÃO LOGIN/CADASTRO */
@@ -411,10 +420,125 @@ section{
 /* Telas maiores */
 @media only screen and (min-width: 1025px){
     #container{
-        width: 80vmin;
-        margin: 0 auto;
-        height: 100vmax;
-        background-color: gray;
+        height: 100vh;
+    }
+    #in_box{
+        display: none;
+    }
+    #section_login{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .inicio_login{
+        grid-column: 1;
+        justify-self: center;
+        align-items: start;
+        width: 60%;
+    }
+    .inicio_login > img{
+        min-width: 30vw;
+        justify-self: start;
+    }
+    .inicio_login > h3{
+        display: block;
+        width: 40vw;
+
+        justify-self: start;
+    
+        text-align: left;
+        font-family: 'Roboto', sans-serif;
+        font-size: 3rem;
+        font-weight: 600;
+        color: #f1f2f6;
+    }
+
+    /* ESTILO DOS INPUTS */
+
+    #main_form{
+        width: 100%;
+    }
+    .input{
+        width: 100%;
+        height: 1.5em;
+        background-color: transparent;
+        border-radius: 10px;
+
+        outline: none;
+        color: #636e72;
+        font-size: var(--main-desktop-font-size);
+        margin-top: .5em;
+    }
+    .inputs-box_input{
+        margin-top: 1.4em;
+        width: 100%;
+    }
+
+    .inputs a, #avancar{
+        font-size: 1.5rem;
+    }
+
+    .inputs-label{
+        font-size: 1.5rem;
+    }
+    .login_text{
+        display: none;
+    }
+
+    .login_components span{
+        font-size: 1.5rem;
+        margin-top: 1em;
+    }
+
+    /* ESTILOS DA PT2. DO CADASTRO */
+    #pt2-cad span:nth-child(2){
+        justify-content: start;
+        font-size: var(--main-desktop-font-size);
+        margin-top: 2em;
+    }
+    #pt2-cad span:nth-child(1){
+        justify-content: start;
+        margin-top: 2em;
+    }
+    #foto-perfil, .login-btn, .cadastro-btn{
+        font-size: var(--main-desktop-font-size);
+        margin-top: 1em;
+        height: 4.5vh;
+    }
+    .login-btn{
+        margin-top: 2em;
+    }
+    .inputs{
+        display: flex;
+        align-self: center;
+
+        border: 3px solid #f5f6fa;
+        border-radius: 10px;
+        background-color: #f1f2f6;
+        padding: 1em;
+        box-shadow: 10px 10px 5px 0px rgba(71,63,63,0.75);
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(71,63,63,0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(71,63,63,0.75);
+
+        width: 60%;
+    }
+    .login-btn{
+        height: 1.5em;
+        font-size: 1.5rem;
+        width: 100%;
+        margin-top: 1.5em;
+    }
+    .outra_opcao-btn{
+        width: 100%;
+        height: 1.5em;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        margin-top: 1em;
+    }
+
+    .error-msg{
+        font-size: var(--main-desktop-font-size);
     }
 }
 
