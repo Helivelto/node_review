@@ -6,9 +6,12 @@ body{
     height: 100vh;
 }
 :root{
+    /* DEFAULT TABLET */
     --main-tablet-font-size: 1.7rem;
     --btn-tablet-font-size: 2rem;
     --main-input-font-size: 1.5rem;
+    /* DEFAULT DESKTOP */
+    --main-desktop-font-size: 2rem;
 }
 
 
@@ -338,10 +341,69 @@ section{
 /* Desktop */
 @media only screen and (min-width: 840px) and (max-width: 1024px){
     #container{
-        width: 90vmin;
-        margin: 0 auto;
-        height: 100vmax;
-        background-color: blue;
+        height: 100vh;
+    }
+
+    .inicio_login > img{
+        min-width: 40vw;
+    }
+
+    /* ESTILO DOS INPUTS */
+
+    .input{
+        width: 75vw;
+        height: 2em;
+        background-color: transparent;
+        border-radius: 10px;
+
+        outline: none;
+        color: #636e72;
+        font-size: var(--main-desktop-font-size);
+        margin-top: .5em;
+    }
+
+    .inputs a, #avancar{
+        font-size: var(--main-desktop-font-size);
+    }
+
+    .inputs-label{
+        font-size: var(--main-desktop-font-size);
+    }
+    .login_text{
+        font-size: 3.3rem;
+        margin-bottom: 1em;
+    }
+
+    .login_components span{
+        font-size: var(--main-desktop-font-size);
+        margin-top: 1em;
+    }
+
+    /* ESTILOS DA PT2. DO CADASTRO */
+    #pt2-cad span:nth-child(2){
+        justify-content: start;
+        font-size: var(--main-desktop-font-size);
+        margin-top: 2em;
+    }
+    #pt2-cad span:nth-child(1){
+        justify-content: start;
+        margin-top: 2em;
+    }
+    #foto-perfil, .login-btn, .cadastro-btn{
+        font-size: var(--main-desktop-font-size);
+        margin-top: 1em;
+        height: 4.5vh;
+    }
+    .login-btn{
+        margin-top: 2em;
+    }
+    .inputs{
+        display: flex;
+        align-self: center;
+    }
+
+    .error-msg{
+        font-size: var(--main-desktop-font-size);
     }
 }
 

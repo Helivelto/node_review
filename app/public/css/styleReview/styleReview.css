@@ -50,14 +50,15 @@
     align-items: center;
 }
 #back_box img{
-    width: 30px;
-
-    margin-left: calc(5vw + 1em);
+    margin-left: 2em;
     margin-right: 2em;
 }
 
 /* Mobile */
 @media only screen and (max-width: 480px){
+    #back_box img{
+        width: 30px;
+    }
     .review_box span:nth-child(1){
         margin-top: 1em;
 
@@ -91,6 +92,9 @@
 
 /* Tablet */
 @media only screen and (min-width: 481px) and (max-width: 839px){
+    #back_box img{
+        width: 40px;
+    }
     .review_box span:nth-child(1){
         margin-top: 1em;
 
@@ -125,7 +129,42 @@
 
 /* Desktop */
 @media only screen and (min-width: 840px) and (max-width: 1024px){
+    #back_box img{
+        width: 60px;
+    }
+    .review_box span:nth-child(1){
+        margin-top: 1em;
 
+        font-size: 2rem;
+        color: #2f3542;
+    } 
+    .review_box span:nth-child(2){
+        margin-top: 1em;
+
+        font-size: 2.5rem;
+        font-weight: bolder;
+    }  
+    .review_box span:nth-child(3){
+        font-size: 2rem;
+
+        color: #2f3542;
+        margin-top: .7em;
+    }
+    .review_box p{
+        margin-top: 1.5em;
+        
+        font-size: 2rem;
+        color: #000;
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.3em;
+    }
+    #back_box h3{
+        font-size: 2.3rem;
+        font-family: 'Roboto Mono', sans-serif;;
+    }
+    img{
+        width: 60px;
+    }
 }
 
 /* Telas Maiores */
