@@ -469,66 +469,73 @@ main h2{
 /* Telas Maiores */
 @media only screen and (min-width: 1025px){
     header{
-        width: 100%;
-        height: 6vh;
+        height: 12vh;
+        padding: 0em 5em 0em 5em;
     }
-
     .logotipo{
-        font-size: 2.3em;
-        font-family: 'Pattaya', sans-serif;
+        font-size: 2rem;
     }
-
-    .img_lead{
-        width: 38%;
-    }
-
-    nav .menu_bar, input{
-        display: none;
-    }
-    .menu_ul{
-        height: 100%;
-        width: 70%;
-    
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-end;
-    
-        position: absolute;
-        top: 0;
-        
-        padding: 1em;
-
-        font-size: 1.6rem;
-    
-        background-color: #30b869;
-    }
-
-    section h3{
-        width: 35vw;
-        font-size: 2.7rem;
-    }
-    #box_main{
-        width: 60vw;
+    #menu_vertical{
+        height: 8vh;
+        width: 30%;
+        background-color: transparent;
 
         display: flex;
-        flex-direction: column;
-
-        margin-top: 3vh;
-        margin-left: auto;
-        margin-right: auto;
+        flex-direction: row;
+        align-items: center;
     }
-    main h2{
-        margin-top: 8vh;
-        margin-left: 0;
-        margin-bottom: 3vh;
+    .menu_ul_vertical{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        width: 100%;
+    }
+    ul div{
+        width: 100%;
+
+        
+        color: #f1f2f6;
+
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    ul div > img {
+        margin-right: 10px;
+    }
+    #menu_hamburguer{
+        display: none;
+    }
+
+    /* PAGINA INICIAL */
+    #create_post a{
+        font-size: 1.5rem;
+    }
+    #create_post{
+        width: 15vw;
+    }
+    section{
+        padding: 0 5em 0 5em;
+    }
+    section > img{
+        width: 20%;
+    }
+    section > h3{
+        font-size: 2rem;
+        margin: 0;
+    }
+    #box_main > h2{
+        font-size: 1.7rem;
+        margin-left: 25vw;
     }
     .box_review{
-        width: 100%;
-        min-height: 9em;
-        margin: auto;
+        min-height: 10em;
+        width: 50vw;
     }
-
-    #create_post{
-        width: 15vw;        
+    .box_review a{
+        font-size: 1.5rem;
+    }
+    .box_review span{
+        font-size: 1.3rem;
     }
 }

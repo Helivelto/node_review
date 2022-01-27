@@ -476,6 +476,7 @@ section{
     }
 
     .inputs a, #avancar{
+        width: 100%;
         font-size: 1.5rem;
     }
 
@@ -505,6 +506,7 @@ section{
         font-size: var(--main-desktop-font-size);
         margin-top: 1em;
         height: 4.5vh;
+        width: 100%;
     }
     .login-btn{
         margin-top: 2em;
