@@ -434,3 +434,9 @@ main > h3{
         color: #fff;
     }
 }
+
+/* PEQUENAS AIMAÇÕES */
+#postar_review:hover{
+    background-color: #16a085;
+    transition: .5s;
+}

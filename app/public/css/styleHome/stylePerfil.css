@@ -83,7 +83,7 @@ main .msg_no-review{
         color: #2f3542;
         font-size: 1.6rem;
     }
-    #box_main div{
+    .box_review-perfil{
         width: 90vw;
         min-height: 5em;
     
@@ -275,4 +275,10 @@ main .msg_no-review{
     #span_produto{
         font-size: 1.3rem;
     }
+}
+
+/* PEQUENAS ANIMAÇÕES */
+.box_review-perfil:hover{
+    background-color: #dcdde1;
+    transition: .5s;
 }

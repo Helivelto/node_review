@@ -603,3 +603,8 @@ section{
     transition-duration: 1s;
     opacity: 0;
 }
+
+/* PEQUENAS ANIMAÇÕES */
+form button:hover, #avancar:hover, #foto-perfil:hover{
+    background-color: #10ac84;
+}

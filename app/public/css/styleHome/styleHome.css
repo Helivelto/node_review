@@ -269,6 +269,8 @@ main h2{
 }
 
 
+
+
 /* -- Devices -- */
 
 /* Mobile */
@@ -538,4 +540,19 @@ main h2{
     .box_review span{
         font-size: 1.3rem;
     }
+}
+
+
+/* PEQUENAS ANIMAÇÕES */
+#create_post:hover{
+    background-color: #16a085;
+    transition: .5s;
+}
+.box_review:hover{
+    background-color: #dcdde1;
+    transition: .5s;
+}
+li > a:hover{
+    color: #dcdde1;
+    transition: .5s;
 }
