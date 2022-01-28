@@ -185,7 +185,7 @@ section{
     font-weight: bolder;
     border: none;
     width: 75vw;
-    height: 4.5vh;
+    /* height: 4.5vh; */
     background-color: #30b869;
     border-radius: 10px;
     outline: none;
@@ -490,6 +490,7 @@ section{
     .inputs a, #avancar{
         width: 70%;
         font-size: 1.5rem;
+        height: 1.3em;
     }
 
     .inputs-label{
@@ -505,6 +506,9 @@ section{
     }
 
     /* ESTILOS DA PT2. DO CADASTRO */
+    #pt1-cad{
+        margin-bottom: 1.4em;
+    }
     #pt2-cad span:nth-child(2){
         margin-left: 15%;
         margin-right: 15%;
@@ -558,98 +562,6 @@ section{
     .error-msg{
         font-size: 1.5rem;
     } 
-
-    /* #container{
-        height: 100vh;
-    }
-    .inicio_login, #in_box{
-        display: none;
-    }
-    .inicio_login > img{
-        min-width: 20vw;
-        max-width: 50vw;
-    }
-
-    section {
-        display: flex;
-    }
-    /* ESTILO DOS INPUTS */
-    /* .inputs{
-        margin-top: 4vh;
-        
-        width: 40vw;
-        height: 80%;
-
-        display: flex;
-        justify-self: center;
-        align-self: center; */
-
-        /* TESTE */
-        /* border: 3px solid #f5f6fa;
-        border-radius: 10px;
-        background-color: #f1f2f6;
-        padding: 1em;
-    }
-    .inputs-box_input{
-        max-width: 30vw;
-    }
-    .input{
-        max-width: 30vw;
-    }
-    #inputs-cadastro{
-        height: 90vh;
-    }
-    #pt1-cad{
-        margin: 0;
-    }
-    #pt2-cad span{
-        margin-left: 5vw;
-    }  */
-
-    /* ESTILO DOS COMPONENTES DO BOTÃO LOGIN/CADASTRO */
-    /* .cadastro-span{
-        margin-top: 2.3vh;
-        font-family: 'Roboto', sans-serif;
-        font-size: 1rem;
-        color: #636e72;
-        display: flex;
-        justify-content: center;
-    }
-    .cadastro-btn{
-        font-family: 'Roboto', sans-serif;
-        font-size: 1rem;
-        font-weight: bolder;
-        border: none;
-        max-width: 30vw;
-        height: 4.5vh;
-        background-color: #30b869;
-        border-radius: 10px;
-        outline: none;
-        margin-top: 2.5em;
-        color: #fff;
-    }
-
-    .login-btn, #avancar, .outra_opcao-btn{
-        margin-top: 2em;
-        height: 2em;
-        font-size: 1.2rem;
-
-        max-width: 30vw;
-    }
-    #foto-perfil, .cadastro-btn{
-        font-size: 1.5rem;
-        margin-top: 1em;
-        margin-left: 5vw;
-        height: 4.5vh;
-        max-width: 30vw;
-    }
-    .outra_opcao-btn{
-        margin-top: 1em;
-    }
-
-    .error-msg{
-        font-size: 1.2rem;
-    } */ 
 }
 
 

@@ -121,3 +121,35 @@ a{
         text-decoration: underline;
     }
 }
+
+@media screen and (min-width: 1025px){
+    header{
+        padding: 0;
+        height: 10vh;
+    }
+    #main_error{
+        padding-top: 3em;
+        display: flex;
+        justify-content: center;
+    }
+    .msg_main {
+        width: 90%;
+        justify-self: center;
+        background-color: #DB918E;
+        color: #f1f2f6;
+        padding: 2em 1em 2em 1em;
+    }
+
+    .msg_main h1:first-child{
+        font-size: 4rem;
+        color: #f1f2f6;
+    }
+    .msg_main span:nth-child(2){
+        font-size: 1.5rem;
+        margin: 1em 0 1em 0;
+    }
+    .msg_main a:nth-child(3){
+        font-size: 2rem;
+        text-decoration: underline;
+    }
+}

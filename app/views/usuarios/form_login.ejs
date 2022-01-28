@@ -13,14 +13,14 @@
     <link rel="shortcut icon" href="img/R.svg" type="image/x-icon">
     <!-- ESTILOS DA PÁGINA -->
     <link rel=stylesheet href="/css/styleForms/styleLogin.css">
-    
+
 </head>
 
 <body>
     <div id="container">
 
         <main>
-            
+
             <section id="section_login">
 
                 <div id="in_box"></div>
@@ -42,8 +42,7 @@
 
                         <div class="inputs-box_input">
                             <label for="password" class="inputs-label">Senha</label>
-                            <input type="password" name="password" id="password-input" 
-                            class="input"  required>
+                            <input type="password" name="password" id="password-input" class="input" required>
                         </div>
 
                         <div class="login_components">
@@ -55,9 +54,11 @@
                     </form>
                     <% if(message) { %>
                         <p>
-                            <label class="error-msg"><%= message %></label>
+                            <label class="error-msg">
+                                <%= message %>
+                            </label>
                         </p>
-                    <% } %>
+                        <% } %>
                 </div>
 
             </section>

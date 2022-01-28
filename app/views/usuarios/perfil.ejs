@@ -81,13 +81,13 @@
 
             <div id="box_user">
 
-                <% if(usuario.foto_usuario == null || usuario.foto_usuario=='null' ) {%>
+                <% if(usuario.foto_usuario==null || usuario.foto_usuario=='null' ) {%>
                     <img src="/img/userpng.svg" alt="">
-                <% } else { %>
-                    <img src="../../../uploads/<%= usuario.foto_usuario %>" alt="">
-                <% } %>
+                    <% } else { %>
+                        <img src="../../../uploads/<%= usuario.foto_usuario %>" alt="">
+                        <% } %>
 
-                <span>@<%= usuario.nome_usuario %></span>
+                            <span>@<%= usuario.nome_usuario %></span>
 
             </div>
 

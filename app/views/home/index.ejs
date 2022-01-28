@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    
-        <!-- css -->
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/styleHome/styleHome.css">
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <!-- Pattaya -->
-        <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
-        <!-- Roboto -->
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"> <!-- Roboto Mono-->
-        <link rel="shortcut icon" href="img/R.svg" type="image/x-icon">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styleHome/styleHome.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Pattaya -->
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+    <!-- Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"> <!-- Roboto Mono-->
+    <link rel="shortcut icon" href="img/R.svg" type="image/x-icon">
+
 </head>
+
 <body>
     <div id="container">
 
@@ -28,30 +32,30 @@
 
             <nav id="menu_hamburguer">
                 <input type="checkbox" name="menu_checkbox" id="menu_checkbox">
-                    <div class="menu_bar" id="bar1"></div>
-                    <div class="menu_bar" id="bar2"></div>
-                    <div class="menu_bar" id="bar3"></div>
+                <div class="menu_bar" id="bar1"></div>
+                <div class="menu_bar" id="bar2"></div>
+                <div class="menu_bar" id="bar3"></div>
 
-                    <div id="modal_box"></div>
+                <div id="modal_box"></div>
 
-                    <div class="menu">
-                        <ul class="menu_ul">
-                            <div class="user">
-                                <img src="img/user_icon.svg"/>
-                                <li><a href="/perfil">Perfil</a></li>
-                            </div>
+                <div class="menu">
+                    <ul class="menu_ul">
+                        <div class="user">
+                            <img src="img/user_icon.svg" />
+                            <li><a href="/perfil">Perfil</a></li>
+                        </div>
 
-                            <div class="config">
-                                <img src="img/config_icon.svg"/>
-                                <li><a href="/config">Configurações</a></li>
-                            </div>
+                        <div class="config">
+                            <img src="img/config_icon.svg" />
+                            <li><a href="/config">Configurações</a></li>
+                        </div>
 
-                            <div class="logout">
-                                <img src="img/Vector.svg"/>
-                                <li><a href="/logout">Sair</a></li>
-                            </div>
-                        </ul>
-                    </div>
+                        <div class="logout">
+                            <img src="img/Vector.svg" />
+                            <li><a href="/logout">Sair</a></li>
+                        </div>
+                    </ul>
+                </div>
             </nav>
 
             <nav id="menu_vertical">
@@ -81,19 +85,25 @@
             </section>
 
 
-            
+
             <div id="box_main">
 
                 <h2>Útimas Publicações</h2>
-                
-                <% for(let i = 0; i < reviews.length; i++){%>
-                <div class="box_review">
-                    <a href="/anyperfil?autor=<%=reviews[i].autor%>"><span id="span_autor"><%= reviews[i].autor %></span></a>
-                    <a href="review?id=<%=reviews[i].id%>"><%= reviews[i].titulo_review %></a> 
-                    <span id="span_produto"><%= reviews[i].tema %></span>
-                </div>
+
+                <% for(let i=0; i < reviews.length; i++){%>
+                    <div class="box_review">
+                        <a href="/anyperfil?autor=<%=reviews[i].autor%>"><span id="span_autor">
+                                <%= reviews[i].autor %>
+                            </span></a>
+                        <a href="review?id=<%=reviews[i].id%>">
+                            <%= reviews[i].titulo_review %>
+                        </a>
+                        <span id="span_produto">
+                            <%= reviews[i].tema %>
+                        </span>
+                    </div>
                     <br>
-                <%  }   %>
+                    <% } %>
 
             </div>
 
@@ -105,6 +115,7 @@
         </footer>
 
     </div>
-<script src="js/scriptHome/scriptHome.js"></script>
+    <script src="js/scriptHome/scriptHome.js"></script>
 </body>
+
 </html>

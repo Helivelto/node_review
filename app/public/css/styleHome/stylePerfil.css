@@ -31,7 +31,7 @@ main .msg_no-review{
 #box_main a, #span_produto{
     font-family: 'Roboto Mono', monospace;
     color: #2f3542;
-    font-size: 1.6rem;
+    /* font-size: 1.6rem; */
     font-weight: bold;
 /* 
     margin-bottom: 0.5em; */
@@ -49,9 +49,15 @@ main .msg_no-review{
         background-color: #2ecc71;
     }
     #box_user span{
-        font-size: 2rem;
+        font-size: 1.5rem;
         align-self: flex-start;
         margin-left: 5vw;
+    }
+    #box_main a{
+        font-size: 1.4rem;
+    }
+    #span_produto{
+        font-size: 1.2rem;
     }
     #box_user img{
         margin-top: 1em;
@@ -76,8 +82,6 @@ main .msg_no-review{
         font-family: 'Roboto Mono', monospace;
         color: #2f3542;
         font-size: 1.6rem;
-
-        margin-bottom: 1em;
     }
     #box_main div{
         width: 90vw;
