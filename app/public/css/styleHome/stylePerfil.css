@@ -20,11 +20,6 @@ main .msg_no-review{
 #box_main > span:first-child{
     font-family: 'Roboto Mono', monospace;
     color: #2f3542;
-
-    margin-bottom: 1em;
-}
-#box_main{
-    margin-left: 5vw;
 }
 
 #box_main div:nth-child(2){
@@ -48,6 +43,35 @@ main .msg_no-review{
 }
 
 @media only screen and (max-width: 480px){
+    #box_user{
+        padding-left: 0;
+        display: flex;
+        background-color: #2ecc71;
+    }
+    #box_user span{
+        font-size: 2rem;
+        align-self: flex-start;
+        margin-left: 5vw;
+    }
+    #box_user img{
+        margin-top: 1em;
+        width: 20%;
+        align-self: flex-start;
+        margin-left: 5vw;
+    }
+    #box_main > span{
+        font-size: 2.3rem;
+        align-self: flex-start;
+        margin-left: 2vw;
+    }
+    #box_main{
+        display: flex;
+        width: 100%;
+        padding: 3vw;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2em;
+    }
     #box_main > span:first-child{
         font-family: 'Roboto Mono', monospace;
         color: #2f3542;
@@ -70,15 +94,34 @@ main .msg_no-review{
 }
 
 @media only screen and (min-width: 481px) and (max-width: 839px){
+    #box_user{
+        padding-left: 0;
+        display: flex;
+        background-color: #2ecc71;
+    }
     #box_user span{
-        font-size: 1.7rem;
+        font-size: 2rem;
+        align-self: flex-start;
+        margin-left: 5vw;
     }
     #box_user img{
         margin-top: 1em;
         width: 20%;
+        align-self: flex-start;
+        margin-left: 5vw;
     }
     #box_main > span{
         font-size: 2.3rem;
+        align-self: flex-start;
+        margin-left: 2vw;
+    }
+    #box_main{
+        display: flex;
+        width: 100%;
+        padding: 3vw;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2em;
     }
 
     .box_review-perfil{
@@ -111,15 +154,34 @@ main .msg_no-review{
 }
 
 @media only screen and (min-width: 840px) and (max-width: 1024px){
+    #box_user{
+        padding-left: 0;
+        display: flex;
+        background-color: #2ecc71;
+    }
     #box_user span{
         font-size: 2rem;
+        align-self: flex-start;
+        margin-left: 5vw;
     }
     #box_user img{
         margin-top: 1em;
         width: 20%;
+        align-self: flex-start;
+        margin-left: 5vw;
     }
     #box_main > span{
         font-size: 2.3rem;
+        align-self: flex-start;
+        margin-left: 2vw;
+    }
+    #box_main{
+        display: flex;
+        width: 100%;
+        padding: 3vw;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2em;
     }
 
     .box_review-perfil{
@@ -151,19 +213,36 @@ main .msg_no-review{
 }
 
 @media only screen and (min-width: 1025px){
+    #box_user{
+        padding-left: 0;
+        display: flex;
+        background-color: #2ecc71;
+    }
     #box_user span{
         font-size: 1.5rem;
+        align-self: flex-start;
+        margin-left: 25vw;
     }
     #box_user img{
         margin-top: 1em;
+        align-self: flex-start;
+        margin-left: 25vw;
         width: 10%;
     }
     #box_main > span{
         font-size: 1.8rem;
+        align-self: flex-start;
+        margin-left: 22vw;
+        margin-bottom: 0;
     }
 
     #box_main{
-        margin-left: 25vw;
+        display: flex;
+        width: 100%;
+        padding: 3vw;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2em;
     }
 
     .box_review-perfil{
